@@ -91,6 +91,7 @@ int main()
 	
     // int node=a1[i].second;
 	 
+	 	// try solve by graphs
 	 	
 	
 }
