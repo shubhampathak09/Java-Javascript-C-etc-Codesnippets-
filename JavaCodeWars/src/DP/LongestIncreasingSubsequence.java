@@ -8,6 +8,7 @@ public class LongestIncreasingSubsequence {
 
         int[] arr={10,22,9,33,21,50,41,60,80};
 
+        int ovmax=0;
 
         int n=arr.length;
 
@@ -29,8 +30,14 @@ public class LongestIncreasingSubsequence {
                 }
             }
             dp[i]=1+mx;
+            if(ovmax<dp[i])
+            {
+                ovmax=dp[i];
+            }
+
         }
 
+        System.out.println(ovmax);
     }
 
 
