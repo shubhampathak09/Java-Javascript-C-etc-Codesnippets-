@@ -13,6 +13,8 @@
 4 t c=2
 */
 
+// ap uunderstand_1
+
 #include<bits/stdc++.h>
 using namespace std;
 
