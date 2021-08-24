@@ -7,18 +7,22 @@ vector<vector<int>>adj(15);
 
 int dp[15];
 
+vector<bool>visited(15);
+
 void dfs(int u,int parent,int a[14])
 {
 
+//cout<<u<<endl;
 	dp[u]=a[u-1];
-	
+	visited[u]=true;
 	int mx=0;
 	
 	for(auto x:adj[u])
 	{
      	if(x==parent)
 	    continue;
-		
+	    
+		if(!visited[x])
 		dfs(x,u,a);
 		
 		mx=max(mx,dp[x]);		
@@ -71,8 +75,11 @@ adj[14].push_back(7);
 
 int a[]={3,2,1,10,1,3,9,1,5,3,4,5,9,8};	
 	
-dfs(1,-1,a);	
+dfs(1,0,a);	
 
 
 cout<<dp[1];
+
+
+// need to review
 }
