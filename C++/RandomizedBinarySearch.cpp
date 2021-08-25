@@ -4,7 +4,7 @@
 #include<ctime>
 using namespace  std;
 
-
+// imp1
 int getRandom(int x,int y)
 {
 	srand(time(NULL));
