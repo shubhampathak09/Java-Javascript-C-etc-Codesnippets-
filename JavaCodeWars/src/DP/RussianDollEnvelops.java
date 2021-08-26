@@ -21,7 +21,7 @@ public class RussianDollEnvelops {
 
         @Override
         public int compareTo(Envelops o) {
-            return this.h-o.w;
+            return this.w-o.w;
         }
     }
 
@@ -59,7 +59,7 @@ public class RussianDollEnvelops {
 
             for(int j=0;j<i;j++)
             {
-                if(envelops[j].w<envelops[i].w){
+                if(envelops[j].h<envelops[i].h&&envelops[j].w<envelops[i].w){
                     mx=Math.max(mx,dp[j]);
                 }
             }
