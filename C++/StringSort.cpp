@@ -163,3 +163,20 @@ for(int i=0;i<n;i++)
 return 0;
 	
 }
+
+// some error
+
+
+// Sample I/O
+/*
+3
+92 022
+82 12
+77 13
+2 false numeric
+
+
+82 12
+77 13
+92 022
+*/
