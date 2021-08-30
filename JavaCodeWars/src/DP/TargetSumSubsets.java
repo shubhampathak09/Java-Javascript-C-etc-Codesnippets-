@@ -32,9 +32,9 @@ public class TargetSumSubsets {
         boolean[][] dp=new boolean[n+1][tar+1];
 
 
-        for(int i=0;i<=n;i++)
+        for(int i=0;i<dp.length;i++)
         {
-            for(int j=0;j<=tar;j++)
+            for(int j=0;j<dp[0].length;j++)
             {
 
                 if(j==0)
@@ -64,26 +64,28 @@ public class TargetSumSubsets {
 
             if(rem.i==0&&rem.j==0){
                 System.out.println(rem.psf);
+             //   continue;   // critical statement
             }
+            else {
 
-            boolean exc=dp[rem.i-1][rem.j];
+                boolean exc = dp[rem.i - 1][rem.j];
 
-            if(exc==true){
-                queue.add(new Pair(rem.i-1,rem.j, rem.psf));
+                if (exc == true) {
+                    queue.add(new Pair(rem.i - 1, rem.j, rem.psf));
+                }
+
+
+                if (ar[rem.i - 1] <= rem.j) {
+                    boolean inc = dp[rem.i - 1][rem.j - ar[rem.i - 1]];
+
+                    if (inc == true) {
+
+
+                        queue.add(new Pair(rem.i - 1, rem.j - ar[rem.i - 1], ar[rem.i - 1] + " " + rem.psf));
+                    }
+                }
+
             }
-
-
-            if(ar[rem.i-1]<=rem.j)
-            {
-            boolean inc=dp[rem.i-1][rem.j-ar[rem.i-1]];
-
-            if(inc==true) {
-
-
-                queue.add(new Pair(rem.i - 1, rem.j - ar[rem.i - 1], ar[rem.i - 1] +" "+ rem.psf));
-            }
-            }
-
         }
 
     }
