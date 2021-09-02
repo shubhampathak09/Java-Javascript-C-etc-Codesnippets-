@@ -13,7 +13,7 @@ int  main()
 	
 	int s1_start=0;
 	
-	int s2_start=0;
+	int s2_start=0;   //st2
 	
 	int s1_end=s1.length()-1;
 	
