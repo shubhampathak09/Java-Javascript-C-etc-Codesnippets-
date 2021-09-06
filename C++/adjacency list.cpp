@@ -11,6 +11,8 @@ int main()
 	vector<pair<int,int>>adj[n+1];
 	
 	
+	//vector<vector<pair<int,int>>>g(n+1);
+	
 	for(int i=0;i<m;i++)
 	{
 		
