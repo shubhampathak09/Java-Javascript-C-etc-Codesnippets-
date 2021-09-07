@@ -25,9 +25,14 @@ int 	sum2=money[ci];
 	}
 	generate(next,sum2);
 	
-	maxmoney=max(sum1,sum2);
+	maxmoney=max(maxmoney,max(sum1,sum2));
 }
 
+
+// need backtrackong
+
+
+// correct ans  is 30 , here the ans is 22.. need to review
 int main()
 {
 	
@@ -38,7 +43,9 @@ int main()
 	}
 	
 	
-	int n=4;
+	int n;
+	
+	cin>>n;
 	
 	for(int i=1;i<=n;i++)
 	{
@@ -48,5 +55,18 @@ int main()
 		mp[2].push_back(1);
 	}
 	
+	generate(1,0);
 	
+	
+	cout<<"Max money is.."<<maxmoney;
 }
+
+
+/*
+3 14 5 2 3 4 1 9
+4
+1 2
+2 3
+4 5
+7 8
+*/
