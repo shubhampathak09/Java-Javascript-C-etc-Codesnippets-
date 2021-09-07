@@ -14,6 +14,7 @@ int main()
 	
 	int n=sizeof(a)/sizeof(a[0]);
 	
+ //vector<vector<int>>v;
 	
 	int low=0;
 	int high=n-1;
