@@ -62,6 +62,8 @@ int main()
 }
 
 
+//try bitmask instead of recursion
+
 /*
 3 14 5 2 3 4 1 9
 4
