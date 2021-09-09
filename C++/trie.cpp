@@ -56,6 +56,61 @@ bool search(struct trie*root,string str){
 	return curr->isleaf==true;
 }
 
+int hasChildren(trie*root){
+	
+	for(int i=0;i<26;i++)
+	{
+		if(root->child[i])
+		return 1;
+	}
+	return 0;
+	
+}
+
+
+
+trie*remove(trie*root,string key,int depth){
+	if(root==NULL)
+	return NULL;
+	
+	
+	if(depth==key.size()){
+		
+		
+		if(root->isleaf==true){
+			root->isleaf=false;
+		}
+		if(hasChildren(root)==false){
+			delete(root);
+			root=NULL;
+		}
+		
+		return root;
+	}
+	
+	
+	
+	int index=key[depth]-'a';
+	root->child[index]=remove(root->child[index],key,depth+1);
+	
+	
+	if(hasChildren(root)&&root->isleaf==false)
+	{
+		delete(root);
+		root=NULL;
+	}
+	
+	return root;
+}
+
+
+// deletion bottom up 
+
+
+
+
+// write logic above
+
 int main()
 {
 	
