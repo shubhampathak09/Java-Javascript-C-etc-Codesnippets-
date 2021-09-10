@@ -55,6 +55,43 @@ bool search(trie*root,string word){
 	
 }
 
+
+bool hasChild(trie*root){
+	
+	if(root->mp.size()!=0){
+		return true;
+	}
+	return false;
+}
+
+
+trie*remove(trie*root,string word,int depth){
+	
+	
+	
+	if(depth==word.length()){
+		
+		if(root->isend==true){
+			root->isend=false;
+		}
+		if(hasChild(root)==false){
+			delete(root);
+			root=NULL;
+		}
+		return root;
+	}
+	
+	char c=word[depth];
+	root->mp[c]=remove(root->mp[c],word,depth+1);
+	
+	if(root->isend==false&&hasChild(root)==false){
+		delete(root);
+		root=NULL;
+	}
+	
+	return root;
+}
+
 int main()
 {
 	
@@ -75,5 +112,15 @@ int main()
 	
 	cout<<search(root,"pineapple");
 	
+//	remove(root,"orange",0);
+	
+	cout<<endl;
+	
+//	cout<<"AFTER Delting orange from trie node..";
+
+
+// Check remove BUG IN CODE
+	
+//	cout<<search(root,"orange");
 	
 }
