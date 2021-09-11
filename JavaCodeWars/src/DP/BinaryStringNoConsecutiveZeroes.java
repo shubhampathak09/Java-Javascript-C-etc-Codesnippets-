@@ -5,7 +5,7 @@ public class BinaryStringNoConsecutiveZeroes {
 
     public static void main(String[] args){
 
-        int n=5;
+        int n=6;
 
      //   int []  dp=new int[n+1];
 
