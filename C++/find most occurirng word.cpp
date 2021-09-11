@@ -92,4 +92,8 @@ int main()
 
 // fixed bool fq to int fq;
 
+// print k max ocuuring word +heap
+
+// print all words havig same frequency
+
 
