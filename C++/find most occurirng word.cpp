@@ -6,7 +6,7 @@ using namespace std;
 struct trie{
 
 map<char,trie*>mp;
-bool fq=0;
+int fq=0;
 bool isend=false;
 };
 
@@ -32,7 +32,7 @@ void insert(trie*root,string str){
     else
 	curr->fq=curr->fq+1;
 	
-	cout<<curr->fq<<endl;
+//	cout<<curr->fq<<endl;
 }
 
 
@@ -49,7 +49,7 @@ void recur(trie*root,string res){
 	
 	if(root->isend==true){
 		
-		cout<<res<<" - "<<root->fq<<endl;
+//		cout<<res<<" - "<<root->fq<<endl;
 		if(root->fq>ovfq){
 			ovfq=root->fq;
 			ans=res;
@@ -58,10 +58,10 @@ void recur(trie*root,string res){
 	}
 	
 	for(auto x:root->mp){
-		res.push_back(x.first);
-		recur(x.second,res);
-		res.pop_back();
-	//	recur(x.second,res+x.first);
+	//	res.push_back(x.first);
+	//	recur(x.second,res);
+	//	res.pop_back();
+		recur(x.second,res+x.first);
 	}
 	
 }
@@ -88,3 +88,8 @@ int main()
 
 
 // fq not incementing need to check why??
+
+
+// fixed bool fq to int fq;
+
+
