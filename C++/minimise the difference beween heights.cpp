@@ -35,8 +35,10 @@ int getminDiff(int arr[],int n,int k)
 int main()
 {
 	
-	
-	int a[]={1, 5, 15,10};
+    
+	int a[]={1,3,6};
+	 	
+	//int a[]={1, 5, 15,10};
 	
 	int n=sizeof(a)/sizeof(a[0]);
 	
