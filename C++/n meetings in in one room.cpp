@@ -10,14 +10,11 @@ using namespace std;
 
 bool cmp(pair<int,int>p1,pair<int,int>p2){
 	
-	
-	if(p1.second<p2.second){
+	 
+		return p1.second<p2.second;
 		
-		return p1.first<p2.first;
-		
-	}
-	else
-	return p1.first<p2.first;
+ 
+ 
 }
 
 
@@ -80,3 +77,5 @@ sort(meeting,meeting+n,cmp);
 	cout<<"Total Number of possible meetings are:- "<<cnt;
 	//fml
 }
+
+// fixed --
