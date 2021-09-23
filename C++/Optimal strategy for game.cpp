@@ -8,27 +8,25 @@ int dp[1000][1000];
 
 int solve(vector<int>a,int i,int j)
 {
-	
 	if(i>j)
 	{
 		return 0;
 	}
 	
-	if(j==i+1
-	){
+	if(j==i+1){
 		return max(a[i],a[j]);
 	}
 	
-	if(i==j)
-	{
-		return a[i];
+    if(i==j)
+    {
+    	return a[i];
 	}
 	
 	if(dp[i][j]!=-1)
 	return dp[i][j];
 	
 	int choice1= a[i]+min(solve(a,i+2,j),solve(a,i+1,j-1));
-	int choice2=a[j]+min(solve(a,i+2,j-1),solve(a,i,j-2));
+	int choice2=a[j]+min(solve(a,i+1,j-1),solve(a,i,j-2));
 	
 //	cout<<choice1<<" "<<choice2<<endl;
 	
@@ -41,7 +39,7 @@ int main()
 	
 	
 	memset(dp,-1,sizeof(dp));
-	vector<int>a={20,3,2,10,3};
+	vector<int>a={8,15,3,7};
 	
 	
 	int ans=solve(a,0,a.size()-1);
