@@ -51,7 +51,7 @@ int solve(string num,int pos,int tight,int sum){
 		
 	}
  
-	
+	// 0 +1 +2 +3 +4
 
 
 int main()
@@ -61,6 +61,9 @@ int main()
 	int n=4;
 	
 	string s=to_string(4);
+	
+	
+	
 	
 	// 
 	
@@ -72,7 +75,18 @@ int main()
 	cout<<solve(s,0,1,sum);
 	
 	
+	// Genral idea
 	
+	
+	// [l,r]
+	
+	// ans1 0 to l-1 
+	
+	
+	// ans2 -> 0, r
+	
+	
+	// return ans2-ans1   ->general idea +memoize
 	
 }
 
