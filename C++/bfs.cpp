@@ -5,6 +5,9 @@ vector<int>adj[10001];
 
 vector<bool>visited(10001);
 
+
+
+//todo
 void doBfs(int i)
 {
 
