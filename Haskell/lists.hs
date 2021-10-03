@@ -17,3 +17,7 @@ pr1=[x*2 | x<- [1..10], x*2>=12]
 pr2=[x | x<-[50..100],x `mod` 7 ==3]
 
 boombang xs=[if x < 10 then "Boom!" else "Bang!" | x<- xs,odd x]
+
+pr3 = [x | x<-[1..100],x /=13,x/=15,x/=19]
+
+length' xs =sum [1 | _ <-xs]
