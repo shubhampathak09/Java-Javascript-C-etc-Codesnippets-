@@ -23,3 +23,16 @@ pr3 = [x | x<-[1..100],x /=13,x/=15,x/=19]
 length' xs =sum [1 | _ <-xs]   --length function
 
 removeNonUppercase st = [ c | c<-st, c `elem` ['A'..'Z']]
+
+xxs = [[1,3,5,2,3,1,2,4,5],[1,2,3,4,5,6,7,8,9],[1,2,4,2,1,6,3,1,3,2,3,6]] 
+
+pr11= [ [x | x<-xs,even x] | xs<-xxs]
+
+
+--pp1=[[1,2],[4,5],[6,7]]
+
+--vpp1=[ e1 | e1<-e | e `mod' 2==0|e<-pp1]
+
+--tuple
+
+--types and typeclasses
