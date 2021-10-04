@@ -89,7 +89,7 @@ public class LongestSubstringWithAtleasKuniqueCharacters {
 
 
 
-
+ // stream 1.8 and above not supported in 1.8 and less
     }
 
 }
