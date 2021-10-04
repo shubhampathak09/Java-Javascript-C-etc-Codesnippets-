@@ -40,7 +40,7 @@ public class StreamObject {
 
         // 5  List,Set, etc  list.stream() call stream on object
 
-        
+
 
 
     }
