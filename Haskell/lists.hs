@@ -20,4 +20,6 @@ boombang xs=[if x < 10 then "Boom!" else "Bang!" | x<- xs,odd x]
 
 pr3 = [x | x<-[1..100],x /=13,x/=15,x/=19]
 
-length' xs =sum [1 | _ <-xs]
+length' xs =sum [1 | _ <-xs]   --length function
+
+removeNonUppercase st = [ c | c<-st, c `elem` ['A'..'Z']]
