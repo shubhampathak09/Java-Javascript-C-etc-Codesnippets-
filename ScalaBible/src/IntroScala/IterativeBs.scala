@@ -28,6 +28,6 @@ object IterativeBs {
 
     // bit advnaced right go to basics
 
-    
+
   }
 }
