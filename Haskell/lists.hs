@@ -35,4 +35,4 @@ pr11= [ [x | x<-xs,even x] | xs<-xxs]
 
 --tuple
 
---types and typeclasses
+--types and typeclasses  Yes
