@@ -24,5 +24,17 @@ object Iter extends App{
 
   val twice: Double =>Double =_*2
 
+
+  val lt : (Double,Double) => Boolean = _<_
+
   println(twice(4))
+
+  println("....")
+
+
+  println(lt(3,4))
+
+  println(lt(122,12))
+
+  println(lt(20,20))
 }
