@@ -17,9 +17,10 @@ public class StackImpl {
 
         while(!st.empty()){
 
-            int x=st.peek();   // or just us st.pop()
-            // st.pop();
-            System.out.println(x);
+              // or just us st.pop()
+
+            System.out.println(st.peek()+" "+st.size());
+            st.pop();
         }
         // first in first out
     }
