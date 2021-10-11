@@ -35,4 +35,11 @@ object ReadTimeout extends App {
 
   // heavy handed way of terminatinf the program
   sys.exit(0)
+
+  // low level java threads
+
+
+  // Future and After Paallel Collections thyey are less error prone
+
+  
 }
