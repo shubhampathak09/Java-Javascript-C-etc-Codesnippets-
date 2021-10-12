@@ -21,4 +21,7 @@ int main()
 	cout<<fact<<endl;
 	
 	
+	int x= (1<<31);
+	
+	cout<<x;
 }
