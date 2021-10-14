@@ -1,5 +1,6 @@
 // Module 1e9+7
 
+//why 2<<31 is negetive??
 #include<bits/stdc++.h>
 using namespace std;
 
