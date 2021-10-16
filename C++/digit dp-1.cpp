@@ -57,7 +57,7 @@ For example if a = 5 and b = 11,
 		 }
 	     return dp[pos][tight][sum]=res;	
 	 }
- }
+ }//j
  //11 18 26   5 6 7 8 9 10 11 
  int main()
  {
