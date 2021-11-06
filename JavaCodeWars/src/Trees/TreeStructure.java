@@ -19,7 +19,7 @@ public class TreeStructure {
 
         Node root=new Node();
         Stack<Node>st= new Stack<>();
-
+// gi stack
         for(int i=0;i<arr.length;i++){
 
 
