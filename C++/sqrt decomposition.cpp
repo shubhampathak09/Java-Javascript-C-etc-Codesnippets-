@@ -68,7 +68,7 @@ void preprocess(int input[],int n){
 int main()
 {
 	
-	int input[]={1,5,2,4,6,1,3,5,7,10};
+    int input[] = {2,4,7,1,5,8,9,10,3,6};
 	
 	int n=sizeof(input)/sizeof(input[0]);
 	
@@ -77,9 +77,18 @@ int main()
 	
 	
 	
-	cout<<query(3,8)<<endl;
+	cout<<"first query:-"<<query(0,3)<<endl;
 	
 	
-	cout<<query(1,6)<<endl;
+	cout<<"second query:-"<<query(4,9)<<endl;
 	
+	
+	
+	updated(5,8);
+	
+	
+	cout<<"third query:-"<<query(3,7)<<endl;
+
+
+    // works on non square root as well
 }
