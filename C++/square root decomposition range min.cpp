@@ -66,7 +66,7 @@ int main()
 	
 	preprocess(inp,n);
 	
-	cout<<rangemin(0,2);
+	cout<<rangemin(4,8); // wrong res here
 	
 	cout<<endl;
 	
