@@ -70,3 +70,19 @@ printf("Case %d: %.2lf\n", caseNo++, matching(0));
 }
 return 0;
 }
+
+
+//Read the followiung problemns
+/*
+
+10360 Rat Attack Complete Search or Dynamic Programming Section 3.1 or 3.4
+10341 Solve It Section 3.2
+11292 Dragon of Loowater Section 3.3
+11450 Wedding Shopping Section 3.4
+11635 Hotel Booking Section 4.3 + 4.5
+11506 Angry Programmer Section 4.8
+10243 Fire! Fire!! Fire!!! Section 4.9.1
+10717 Mint Section 5.3.2
+11512 GATTACA Section 6.4
+10065 Useless Tile Packers Section 7.3
+*/
