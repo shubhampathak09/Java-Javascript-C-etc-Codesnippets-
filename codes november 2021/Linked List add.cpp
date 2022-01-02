@@ -70,3 +70,9 @@ public:
         
     }
 };
+
+
+// check the reverse condition accordingg to question whter req or not
+
+
+
