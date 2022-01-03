@@ -6,6 +6,9 @@ using namespace std;
 class node{
 	
 	
+	
+	// gg
+	
 	int data;
 	vector<node>children;
 	
