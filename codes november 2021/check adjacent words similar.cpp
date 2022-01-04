@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//yes
 
 bool isadj(string a,string b){
 	
