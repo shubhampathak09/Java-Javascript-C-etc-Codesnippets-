@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
+// gcritical
 vector<vector<int>>adj(1000001);
 
 vector<bool>visited(1000001);
