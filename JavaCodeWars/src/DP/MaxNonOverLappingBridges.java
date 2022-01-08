@@ -3,7 +3,7 @@ package DP;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class MaxNonOverLappinfridges {
+public class MaxNonOverLappingBridges {
 
 
     public static class Bridge implements Comparable<Bridge>{
