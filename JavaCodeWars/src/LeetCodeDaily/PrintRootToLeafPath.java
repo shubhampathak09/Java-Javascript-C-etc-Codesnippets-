@@ -19,15 +19,21 @@ public class PrintRootToLeafPath {
 
     public static void printPath(Node root,String path){
 
-        if(root.left==null&&root.right==null){
-            path=path+" "+root.data;
-            System.out.println(path);
+        if(root==null){
             return;
         }
+        path=path+" "+root.data;
 
-        printPath(root.left,path+root.data);
-        printPath(root.right,path+root.data);
 
+        if(root.left==null&&root.right==null){
+          //  path=path+" "+root.data;
+            System.out.println(path);
+            //return;
+        }
+        else {
+            printPath(root.left, path);
+            printPath(root.right, path);
+        }
     }
 
     public static void main(String[] args){
