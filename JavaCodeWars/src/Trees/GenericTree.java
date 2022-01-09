@@ -13,6 +13,21 @@ private static class Node{
 
 }
 
+
+private  static int  max_val(Node node){
+
+    int mx=Integer.MIN_VALUE;
+
+    for(Node n:node.children){
+
+        int cmax=max_val(n);
+        mx=Math.max(mx,cmax);
+    }
+    mx=Math.max(node.data,mx);
+
+    return mx;
+}
+
 private static int sz(Node node){
 
     int siz=0;
@@ -40,6 +55,9 @@ System.out.println(str);
 for(Node child:node.children){
     display(child);
 }
+
+
+
 
 
 
@@ -92,6 +110,7 @@ public static void main(String[] args){
     System.out.println("The size of generic tree is..."+sz(root));
 
 
+    System.out.println("The max value in GT is.."+max_val(root));
 }
 
 }
