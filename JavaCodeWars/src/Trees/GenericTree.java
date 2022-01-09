@@ -13,6 +13,19 @@ private static class Node{
 
 }
 
+public void display(Node root){
+     // display(10)  -> selft(10) and its childten
+    //                  dsp(20)
+    //                  dsp(30)
+
+    
+
+
+
+}
+
+
+
 
 
 
