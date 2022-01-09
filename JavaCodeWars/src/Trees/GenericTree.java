@@ -13,6 +13,18 @@ private static class Node{
 
 }
 
+private static int sz(Node node){
+
+    int siz=0;
+
+    for(Node n:node.children){
+        siz+=sz(n);
+    }
+
+    return 1+siz;
+}
+
+
 public static void display(Node node){
      // display(10)  -> selft(10) and its childten
     //                  dsp(20)
@@ -45,6 +57,7 @@ public static void main(String[] args){
 
     int[] arr={10,20,50,-1,60,-1,-1,30,70,-1,80,110,-1,120,-1,-1,90,-1,-1,40,100,-1,-1,-1,};
 
+    //int[] arr2={10,20,50,-1,60,-1,-1,30,70,-1,80,-1,90,-1,-1,40,100,-1,-1,-1};
 
     Stack<Node>st=new Stack<>() ;
     for(int i=0;i<arr.length;i++){
@@ -75,6 +88,10 @@ public static void main(String[] args){
     }
 
     display(root);
+
+    System.out.println("The size of generic tree is..."+sz(root));
+
+
 }
 
 }
