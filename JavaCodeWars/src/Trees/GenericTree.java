@@ -13,12 +13,21 @@ private static class Node{
 
 }
 
-public void display(Node root){
+public static void display(Node node){
      // display(10)  -> selft(10) and its childten
     //                  dsp(20)
     //                  dsp(30)
 
-    
+    String str=node.data + "->";
+    for(Node child:node.children){
+        str+=child.data +", ";
+    }
+    str+=".";
+System.out.println(str);
+
+for(Node child:node.children){
+    display(child);
+}
 
 
 
@@ -32,7 +41,7 @@ public void display(Node root){
 public static void main(String[] args){
 
 
-    Node root;
+    Node root=null;
 
     int[] arr={10,20,50,-1,60,-1,-1,30,70,-1,80,110,-1,120,-1,-1,90,-1,-1,40,100,-1,-1,-1,};
 
@@ -65,6 +74,7 @@ public static void main(String[] args){
 
     }
 
+    display(root);
 }
 
 }
