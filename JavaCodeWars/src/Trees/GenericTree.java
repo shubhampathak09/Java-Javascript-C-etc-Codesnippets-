@@ -40,6 +40,30 @@ private static int sz(Node node){
 }
 
 
+public static void traversals(Node node){
+
+    //  eulers left ,on the way deep in recursion. nodes pre are
+
+    System.out.println("Nde pre"+node.data);
+
+
+    // area 2
+
+    for(Node child:node.children){
+
+        System.out.println("edge pre"+node.data+ "--"+child.data);
+        traversals(child);
+        System.out.println("edge post"+node.data+"--"+child.data);
+    }
+
+
+    //area  3  nodes post ares eulers right nodes post are
+
+    System.out.println("node post are"+node.data);
+
+}
+
+
 private static int height(Node node){
 
     int ht=0;   // in case of edges use ht=-1
@@ -131,6 +155,8 @@ public static void main(String[] args){
 
 
     System.out.println("The height of tree is.."+height(root));
+
+    traversals(root);
 
 
 
