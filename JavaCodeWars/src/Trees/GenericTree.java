@@ -40,6 +40,23 @@ private static int sz(Node node){
 }
 
 
+private static int height(Node node){
+
+    int ht=0;   // in case of edges use ht=-1
+
+    for(Node n:node.children){
+
+
+        int h=height(n);
+        ht=Math.max(h,ht);
+    }
+    ht+=1;
+
+    return ht;
+
+}
+
+
 public static void display(Node node){
      // display(10)  -> selft(10) and its childten
     //                  dsp(20)
@@ -111,6 +128,13 @@ public static void main(String[] args){
 
 
     System.out.println("The max value in GT is.."+max_val(root));
+
+
+    System.out.println("The height of tree is.."+height(root));
+
+
+
+
 }
 
 }
