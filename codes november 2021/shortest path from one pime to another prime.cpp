@@ -29,7 +29,7 @@ void sieve(vector<int>&v){
 		}
 		
 	}
-	
+	// check sieve again
 	
 	for(int i=1000;i<=9999;i++){
 		
