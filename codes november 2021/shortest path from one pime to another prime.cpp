@@ -119,7 +119,7 @@ for(int i=0;i<n;i++){
 			}
 			
 			if(x==index2)
-			return path[index2];
+			return path[x];
 		}
 		
 		
