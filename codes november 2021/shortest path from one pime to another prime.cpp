@@ -108,17 +108,18 @@ for(int i=0;i<n;i++){
 		
 		q.pop();
 		
-		
+		cout<<"...."<<index2<<"...."<<endl;
 		for(auto x:g[u]){
 			if(visited[x]==false){
 			//	cout<<x<<" ";
 				visited[x]=true;
+				cout<<x<<" "<<endl;
 				q.push(x);
 				path[x]=path[u]+1;
 			}
 			
 			if(x==index2)
-			return path[x];
+			return path[index2];
 		}
 		
 		
@@ -134,7 +135,7 @@ int sp(int num1,int num2){
 	
 	sieve(pset);
 	
-	cout<<"size of graph.."<<pset.size()<<endl;
+//	cout<<"size of graph.."<<pset.size()<<endl;
 	
 	g.resize(pset.size());
 	
@@ -164,7 +165,7 @@ int sp(int num1,int num2){
 		index2=j;
 	}
 	
-	cout<<pset[index1]<<" "<<pset[index2];
+//	cout<<pset[index1]<<" "<<pset[index2];
 	//bfs
   //      return 1;		
 		return bfs(index1,index2,pset.size());
