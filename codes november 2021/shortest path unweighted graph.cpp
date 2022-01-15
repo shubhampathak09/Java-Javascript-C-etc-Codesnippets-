@@ -7,7 +7,7 @@ using namespace  std;
 
 vector<vector<int>>g(10001);
 vector<int>visited(10001);
-
+vector<int>dist(10001);
 
 
 int bfs(int src,int dest,vector<int>&path){
@@ -17,7 +17,7 @@ int bfs(int src,int dest,vector<int>&path){
 	
 	visited[src]=1;
 	int res=0;
-	
+	dist[src]=0;
 	
 	queue<int>q;
 	q.push(src);
@@ -29,7 +29,7 @@ int bfs(int src,int dest,vector<int>&path){
 		
 		int u=q.front();
 		q.pop();
-			res=res+1;
+			
 		
 		for(auto x:g[u]){
 			
@@ -37,15 +37,15 @@ int bfs(int src,int dest,vector<int>&path){
 			if(visited[x]==0){
 				
 				visited[x]=1;
-			
-				path.push_back(x);
+			    dist[x]=1+dist[u];
+				//path.push_back(x);
 				q.push(x);
 				
 			}
 			
 			if(x==dest){
 				
-				return res;
+				return dist[x];
 				
 			}
 			
@@ -81,7 +81,7 @@ void solve(){
 		int ans=bfs(src,dest,path);
 		
 		
-		cout<<ans-1;
+		cout<<ans;
 		
 		cout<<endl;
 		
