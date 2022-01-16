@@ -110,7 +110,7 @@ for(int i=0;i<n;i++){
 		
 		cout<<"...."<<index2<<"...."<<endl;
 		for(auto x:g[u]){
-			if(visited[x]==false){
+			if(!visited[x]){
 			//	cout<<x<<" ";
 				visited[x]=true;
 				cout<<x<<" "<<endl;
