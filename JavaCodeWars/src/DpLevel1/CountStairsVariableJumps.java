@@ -5,7 +5,9 @@ public class CountStairsVariableJumps {
 
 
 
+// cool
 
+    // do some deep analysis on this
     public static void main(String[] args){
 
 
