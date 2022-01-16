@@ -71,3 +71,8 @@ for(int i=0;i<n;i++){
 
 cout<<ans;	
 }
+
+
+// wierd behavio wirth vector<pair<int,int>>vp(n);
+
+
