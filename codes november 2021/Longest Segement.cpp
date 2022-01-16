@@ -22,8 +22,9 @@ int n;
 
 cin>>n;
 
-vector<pair<int,int>>vp(n);
+vector<pair<int,int>>vp;
 
+//vp.resize(n);
 //cout<<sqrt(16);
 
 for(int i=0;i<n;i++){
@@ -33,31 +34,40 @@ for(int i=0;i<n;i++){
 	
 	cin>>a>>b;
 	
-	vp.push_back({a,b});
+	pair<int,int> p={a,b};
 	
+//	cout<<p.first<<" "<<p.second;
 	
+	vp.push_back(p);
+	
+ 
 }
-	float maxdist=sqrt((vp[0].first-vp[1].first)*(vp[0].first-vp[1].first)+(vp[0].second-vp[1].second)*(vp[0].second-vp[1].second));
+
+cout<<vp[0].first<<" "<<vp[0].second;
+
+	//float maxdist=sqrt((vp[0].first-vp[1].first)*(vp[0].first-vp[1].first)+(vp[0].second-vp[1].second)*(vp[0].second-vp[1].second));
 	
+	
+	double ans=0;
 	
 	
 for(int i=0;i<n;i++){
 	
 	for(int j=i+1;j<n;j++){
 		
-		int x1=vp[i].first;
-		int x2=vp[j].first;
-		int y1=vp[i].second;
-		int y2=vp[j].second;
+		double x1=vp[i].first;
+		double x2=vp[j].first;
+		double y1=vp[i].second;
+		double y2=vp[j].second;
+		
+		cout<<x1<<" "<<y1<<" "<<x2<<" "<<y2<<endl;
 		
 		double dist=sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
 		
-		if(maxdist<dist){
-			maxdist=dist;
-		}
+		ans=max(ans,dist);
 	}
 	
 }
 
-cout<<maxdist;	
+cout<<ans;	
 }
