@@ -12,12 +12,19 @@ public class CountPaths {
 
         int n = scn.nextInt();
 
-        int cp = countPaths(n);
+        int[] dp=new int[n+1];   // memoising the ans
 
-        System.out.println(n);
+        int cp = countPaths(n,dp);
+
+
+
+        System.out.println(cp);
+
+
+
     }
 
-    public static int countPaths(int n){
+    public static int countPaths(int n,int[] dp){
 
 
         if(n==0){
@@ -28,16 +35,19 @@ public class CountPaths {
             return 0;
         }
 
-        int nm1=countPaths(n-1);
+        if(dp[n]!=0)
+            return dp[n];
 
-        int nm2=countPaths(n-2);
+        int nm1=countPaths(n-1,dp);
 
-        int nm3=countPaths(n-3);
+        int nm2=countPaths(n-2,dp);
+
+        int nm3=countPaths(n-3,dp);
 
 
         int ans=nm1+nm2+nm3;
 
-        return nm3;
+        return dp[n]=ans;
 
     }
 
