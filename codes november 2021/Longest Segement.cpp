@@ -74,5 +74,9 @@ cout<<ans;
 
 
 // wierd behavio wirth vector<pair<int,int>>vp(n);
-
-
+/*
+3
+0 0
+1 1
+0 1
+*/ // sample i/0

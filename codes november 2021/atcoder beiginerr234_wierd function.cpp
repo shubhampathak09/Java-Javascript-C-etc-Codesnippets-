@@ -9,6 +9,8 @@ int f(int x){
 }
 
 
+
+
 int solve(){
 	
 	int t;
@@ -24,6 +26,8 @@ int solve(){
 
 int main()
 {
+	
+	
 	
  solve();
 	
