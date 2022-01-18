@@ -11,6 +11,7 @@ int f(int x){
 
 
 
+
 int solve(){
 	
 	int t;
