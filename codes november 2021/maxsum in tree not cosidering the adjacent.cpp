@@ -8,6 +8,13 @@ struct node
 	int data;
 	struct node*left;
 	struct node*right;
+	
+	node(int data){
+		
+		this->data=data;
+		this->left=NULL;
+		this->right=NULL;
+	}
 };
 
 
@@ -56,7 +63,7 @@ return sum;
 int main()
 {
 	
-	struct node* root=new node(1;
+	struct node* root=new node(1);
 	
 	root->left=new node(2);
 	
@@ -75,6 +82,6 @@ int main()
 	
 	cout<<ans;
 	
-	)
+	
 	
 }
