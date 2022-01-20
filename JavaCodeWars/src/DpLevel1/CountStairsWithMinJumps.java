@@ -23,11 +23,14 @@ public class CountStairsWithMinJumps {
                {
                    if(dp[i+j]!=null)
                    min=Math.min(min,dp[i+j]);
-               }
 
+
+
+               }
                if(min!=Integer.MAX_VALUE){
                    dp[i]=1+min;
                }
+
            }
 
        }
