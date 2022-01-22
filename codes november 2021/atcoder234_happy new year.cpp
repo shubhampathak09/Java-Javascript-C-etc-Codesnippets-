@@ -1,5 +1,5 @@
 // Happy new Year 2022
-
+// dash algo
 /*
 Problem Statement
 Among the positive integers that consist of 0's and 2's when written in base 10, find the K-th smallest integer.
