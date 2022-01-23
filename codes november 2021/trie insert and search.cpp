@@ -58,6 +58,16 @@ bool search(string s,trie*root){
 int main()
 {
 	
+	struct trie *root=NULL;
 	
+	string dic[]={"cars","car","carseason","carpool","rat","lack","and"};
+	
+	
+	for(auto x:dic){
+		
+		
+		insert(root,x);
+		
+	}
 	
 }
