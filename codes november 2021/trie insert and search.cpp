@@ -38,7 +38,7 @@ void insert(string s,trie*root){
 bool search(string s,trie*root){
 	
 	
-	struct node*curr=root;
+	struct trie*curr=root;
 	
 	for(int i=0;i<s.length();i++){
 		
