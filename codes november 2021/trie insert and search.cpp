@@ -20,7 +20,7 @@ struct trie{
 	
 };
 
-	struct trie *root=NULL;
+	struct trie *root;
 
 void insert(string s,trie*root){
 	 
@@ -66,18 +66,23 @@ bool search(string s,trie*root){
 int main()
 {
 	
-
+    root=new trie();
 	
 	string dic[]={"cars","car","carseason","carpool","rat","lack","and"};
 	
 	
 	for(auto x:dic){
 		
-	    cout<<x;	
+	 //   cout<<x;	
 		insert(x,root);
 		
 	}
 	
-	//cout<<search("cars",root);
+	cout<<search("cars",root);
 	
+	
+	cout<<search("magic",root);
+	
+	
+	// nic always rember to intialize root=nnew trie();
 }
