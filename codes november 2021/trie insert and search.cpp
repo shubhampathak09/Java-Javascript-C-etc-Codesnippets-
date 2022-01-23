@@ -6,31 +6,39 @@ using namespace std;
 
 struct trie{
 	
-	bool isend;
-	trie *child[26];
+ struct trie*child[26];
+	int isend;
 	
-	trie(){
-		
-		
+	trie()
+	{
 		for(int i=0;i<26;i++)
 		child[i]=NULL;
+		
+		isend=0;
+		
 	}
-	
 	
 };
 
+	struct trie *root=NULL;
+
 void insert(string s,trie*root){
+	 
+	 trie*curr=root;
 	
-	trie*curr=root;
 	
-	for(int i=0;i<s.length();i++){
+	for(auto x:s)
+	{
+		int index=x-'a';
 		
-		int index=s[i]-'a';
-		if(curr->child[i]==NULL){
-			curr->child[i]=new trie();
+		if(curr->child[index]==NULL)
+		{
+			curr->child[index]=new trie();
 		}
-		curr=curr->child[i];
+		curr=curr->child[index];
 	}
+	curr->isend=1;
+	
 	
 	curr->isend=true;
 }
@@ -58,16 +66,18 @@ bool search(string s,trie*root){
 int main()
 {
 	
-	struct trie *root=NULL;
+
 	
 	string dic[]={"cars","car","carseason","carpool","rat","lack","and"};
 	
 	
 	for(auto x:dic){
 		
-		
-		insert(root,x);
+	    cout<<x;	
+		insert(x,root);
 		
 	}
+	
+	//cout<<search("cars",root);
 	
 }
