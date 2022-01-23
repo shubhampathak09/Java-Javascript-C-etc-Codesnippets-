@@ -1,7 +1,7 @@
 // trie insert and search
 
 #include<bits/stdc++.h>
-using namespace stdl;
+using namespace std;
 
 
 struct trie{
