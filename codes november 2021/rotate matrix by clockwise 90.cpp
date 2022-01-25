@@ -65,5 +65,7 @@ int main()
 		
 	}
 	
-	
+/*	
+ http://internal-map-cma-production-lb-1488664899.ap-south-1.elb.amazonaws.com/clients/paytm-india/segments/segments-with-rule/size
  
+Rule Engine URL in code for above cma call- String url = "http://" + ruleServiceHost + "/v1/evaluate/count";*/
