@@ -72,6 +72,8 @@ void allPalPartitions(string str)
     }
 }
  
+ // cedits to geeks for above code
+ 
 // Driver program
 int main()
 {
