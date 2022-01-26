@@ -46,3 +46,10 @@ int main(){
 	
 	cout<<"There exists.."<<count<<endl;
 }
+/*
+Here's a challenge. 
+Can we find the numbers $x, y$ such that $ux+vy=\text{gcd} (u,v)$?
+
+There exists infinitely many pairs - 
+this is Bezout's Lemma. The algorithm to generate such pairs is called Extended Euclidean Algorithm.
+*/
