@@ -13,7 +13,7 @@ int turn(string s,int i,int j){
 	
 	for(int k=i;k<j;k++){
 		if(s[j-1]==s[k-1])
-		turns=min(turn(s,i,k)+turn(s,k+1,j-1),turns);
+		turns=min(turn(s,i,k)+turn(s,k+1,j-1),turns);  // looks need to turns-1 for correct ans???
 		
 	}
 	
@@ -36,6 +36,13 @@ int main()
 
 
 
+/*
+Remove Boxes
+
+Burst Balloons
+
+Zuma Game
+*/
 
 
 
