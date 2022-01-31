@@ -87,7 +87,7 @@ struct node* addone(struct node*node){
 
 int main()
 {
-	
+	// creARE a ll
 	
 	// check before impl type specifiers dont seem to be correct
 	// athough logic is correct
