@@ -8,6 +8,9 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+ 
+ //cool
+ 
 class Solution {
 public:
     
