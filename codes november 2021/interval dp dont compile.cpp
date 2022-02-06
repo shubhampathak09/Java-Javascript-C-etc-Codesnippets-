@@ -6,6 +6,20 @@
 
 // default syntaxz:-
 
+
+// interval dp subproblems
+
+//cand 
+
+/*
+l3n=2;len<=n len++
+i=1;i<=n;i++
+j=i+len-1
+if(j>n)break
+k=i;k<j;k++
+min(dp[i][k],dp[i][k]+dp[k+1][j]+sum) //
+*/
+
 for(int i=1;i<=n;i++)
 {
     dp[i][i]=Initial value
