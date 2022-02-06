@@ -34,5 +34,5 @@ for(int i=1;i<=n;i++)        //Enumeration starting point
         dp[i][j]=max(dp[i][j],dp[i][k]+dp[k+1][j]+w[i][j]);
     }
 }
-
+ w[i][j]=sum[j]-sum[i-1]. // note
 
