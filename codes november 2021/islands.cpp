@@ -15,9 +15,10 @@ int dy[]={-1,0,1,-1,1,-1,0,1};
 
 bool issafe(int i,int j,int n,int m){
 	
-	if(i<0||i>=n||j<0||j>=m||visited[i][j]==0)
+	cout<<visited[i][j]<<endl;
+	if(i<0||i>=n||j<0||j>=m||visited[i][j]==1)
 	return false;
-	else
+	
 	return true;
 	
 	
@@ -69,6 +70,7 @@ for(int i=0;i<n;i++){
 	for(int j=0;j<m;j++){
 		
 		if(grid[i][j]==1&&visited[i][j]==0){
+			cout<<i<<j<<endl;
 			dfs(i,j,n,m);
 			count++;
 		}
