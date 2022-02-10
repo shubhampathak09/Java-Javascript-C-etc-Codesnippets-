@@ -56,11 +56,11 @@ int lcs(int u,int v){
 
 void preprocess(int root){
 	
-	tin.resize(n);
-	tout.resize(n);
+	tin.resize(n+1);
+	tout.resize(n+1);
 	timer=0;
 	l=ceil(log2(n));
-	up.assign(n,vector<int>(l+1));
+	up.assign(n+1,vector<int>(l+1));
 	
 	dfs(root,root);
 	
@@ -90,5 +90,21 @@ int main(){
 	adj[7].push_back(3);
 	
 	
-	preprocess(1);  //fml
+	preprocess(1);  //fml  
+	
+	
+	// fixed  // had to change n to n+1
+	
+	
+	cout<<lcs(4,5)<<endl;
+	
+	cout<<lcs(4,6)<<endl;
+	
+	cout<<lcs(3,4)<<endl;
+	
+	cout<<lcs(2,4)<<endl;
+	
+	
+	// Noice
+	
 }
