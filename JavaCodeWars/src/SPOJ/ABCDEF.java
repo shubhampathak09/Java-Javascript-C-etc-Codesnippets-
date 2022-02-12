@@ -68,6 +68,17 @@ public class ABCDEF {
 
     public static void main(String[] args){
 
+        int t;
+
+        Scanner s=new Scanner(System.in);
+
+        t=s.nextInt();
+
+        while(t>0) {
+            solve();
+            t--;
+        }
+
     }
 
 }
