@@ -13,6 +13,9 @@ int xorgame(int k){
 	
 }
 
+
+// try observint the pattern from 1 to 10 will get the logic
+
 int main()
 {
 	

@@ -1,7 +1,6 @@
 // xor game
 
-anantkumawat10110
-17 minutes ago
+ 
 
 C++ Solution.
 
@@ -11,9 +10,7 @@ int xorCal(int k){
     return -1;
 }
 0
-
-yadavdheeraj2002
-19 minutes ago
+ 
 
 c++ 
 

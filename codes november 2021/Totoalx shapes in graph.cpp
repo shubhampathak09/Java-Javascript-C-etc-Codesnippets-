@@ -80,7 +80,7 @@ for(int i=0;i<R;i++){
 cout<<"Total x shapes  in gaph.."<<count;
 
 
-int h=ceil(log2(6));
+//int h=ceil(log2(6));
 	
 }
 
