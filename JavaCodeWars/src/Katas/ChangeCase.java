@@ -5,21 +5,26 @@ public class ChangeCase {
     public static void main(String[] args){
 
 
-        String s="hello";
+        String s="helLO";
         String ss="";
         for(int i=0;i<s.length();i++){
 
 
             char curr=s.charAt(i);
             if(Character.toLowerCase(curr)==curr){
-                System.out.println("ye");
+                ss+=Character.toUpperCase(curr);
+            //    System.out.println("ye");
             }else
             {
-                System.out.println("no");
+                ss+=Character.toLowerCase(curr) ;
+                //System.out.println("no");
             }
 
         }
 
+
+        System.out.println("Original text.."+s);
+        System.out.println("After processing.."+ss);
 
     }
 
