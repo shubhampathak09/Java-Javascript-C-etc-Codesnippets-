@@ -43,7 +43,7 @@ public class ABCDEF {
         for(int f:ar){
             for(int d:ar){
                 for(int e:ar){
-
+                    if(d==0) continue;
                     int exp=f*d+f*e;
                     hm.put(exp,hm.getOrDefault(exp,0)+1);
                 }
