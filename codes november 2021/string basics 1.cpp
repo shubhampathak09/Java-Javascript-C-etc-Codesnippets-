@@ -11,7 +11,10 @@ int main(){
 	
 	string s;  //Dynamic Array
 	
-	s="hello world";
+	//s="hello world";
+	
+	getline(cin,s);  //using getline
+	
 	
 	cout<<s<<endl;
 	
