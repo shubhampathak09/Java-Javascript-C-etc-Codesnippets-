@@ -90,3 +90,7 @@ int main(){
     checkBST(root)==1 ? cout<< "Given tree is BST" : cout<<"Given tree is not BST";
 
 }
+
+
+// more related problems
+
