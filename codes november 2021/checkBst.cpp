@@ -63,6 +63,11 @@ bool checkBST(struct node*root){
 	
 }
 
+void inoder(struct  node*root){
+	
+	
+	
+}
 
 int main(){
 	
@@ -79,6 +84,8 @@ int main(){
 //	cout<<maxvalue(root->left);
 //	cout<<minval(root->right);
 
+
+ 
 
     checkBST(root)==1 ? cout<< "Given tree is BST" : cout<<"Given tree is not BST";
 
