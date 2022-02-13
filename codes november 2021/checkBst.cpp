@@ -76,6 +76,10 @@ int main(){
 	
 	root->left->right=new node(4);
 	
-	cout<<maxvalue(root->left);
-	cout<<minval(root->right);
+//	cout<<maxvalue(root->left);
+//	cout<<minval(root->right);
+
+
+    checkBST(root)==1 ? cout<< "Given tree is BST" : cout<<"Given tree is not BST";
+
 }
