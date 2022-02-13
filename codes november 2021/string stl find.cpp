@@ -34,6 +34,15 @@ if(index!=-1){
 */
 
 
+//int index=par.find(word);
+// given code will return all occurences of word in string
+while(index!=-1){
+
+cout<<"occurence of word at.."<<index<<endl;	
+index=par.find(word,index+1);
+	
+}
+
 }
 
  
