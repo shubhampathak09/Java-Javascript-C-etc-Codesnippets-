@@ -1,4 +1,6 @@
 // allocate min paages
+// cp bs
+
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -105,4 +107,6 @@ Painter Partition Problem
 Minimize 
 774 Max Distance to Gas Station
 410 Split Array Largest Sum
+min days to ship containers with given capacity
+image compression
 */
