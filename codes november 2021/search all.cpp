@@ -11,7 +11,7 @@ vector<int> stringSearch(string big,string small){
     
     return result; 
 }
-
+//cool simple provlem
 int main()
 {
 	
