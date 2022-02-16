@@ -40,7 +40,8 @@ public class EmployeesUnderaManager {
 
 
 
-    }
+    }// short sighted of you
+    
 
     public static void getSize(HashMap<String,HashSet<String>>tree,String ceo,HashMap<String,Integer> map){
   // need to fix the code
@@ -50,6 +51,8 @@ public class EmployeesUnderaManager {
             HashSet<String>curr=tree.get(s);
             map.put(s,curr.size());
         }
+
+
 
 
 
