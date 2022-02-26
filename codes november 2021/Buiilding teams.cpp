@@ -23,6 +23,8 @@ vector<int>colr;
 
 vector<bool>vis;
 
+vector<int>parent;
+
 // very importaant algo
 
 bool dfs(int i,int c,int par){
@@ -31,6 +33,8 @@ bool dfs(int i,int c,int par){
 	vis[i]=true;
 	
 	colr[i]=c;
+	
+	parent[i]=par;
 	
 	for(auto x:g[i]){
 		
@@ -65,34 +69,42 @@ bool color_all(){
 int main(){
 	
 	
-	//test code here
+	 	cin>>n>>m;
+	
+	
 	g.resize(n+1);
-	vis.resize(n+1);
+//	lead.resize(n+1);
 	colr.resize(n+1);
 	
-	cin>>n>>m;
+	vis.resize(n+1);
+	
+	parent.resize(n+1);
 	
 	for(int i=1;i<=m;i++){
 		
-		//int a,b;
-		
+		int a,b;
 		cin>>a>>b;
 		
 		g[a].push_back(b);
 		g[b].push_back(a);
 		
 		
-		
 	}
 	
-	/*
-	if(color_all())
-	{
-		
+	if(color_all){
 		for(int i=1;i<=n;i++){
 			cout<<colr[i]<<" ";
 		}
-		
 	}
-	*/
+	
 }
+
+
+// going rech this
+
+/*
+5 3
+1 2
+1 3
+4 5
+*/
