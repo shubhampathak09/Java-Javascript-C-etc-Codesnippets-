@@ -14,7 +14,7 @@
 using namespace  std;
 
 
-int n,m;
+int n,m,a,b;
 
 
 vector<vector<int>>g;
@@ -66,6 +66,33 @@ int main(){
 	
 	
 	//test code here
+	g.resize(n+1);
+	vis.resize(n+1);
+	colr.resize(n+1);
 	
+	cin>>n>>m;
 	
+	for(int i=1;i<=m;i++){
+		
+		//int a,b;
+		
+		cin>>a>>b;
+		
+		g[a].push_back(b);
+		g[b].push_back(a);
+		
+		
+		
+	}
+	
+	/*
+	if(color_all())
+	{
+		
+		for(int i=1;i<=n;i++){
+			cout<<colr[i]<<" ";
+		}
+		
+	}
+	*/
 }
