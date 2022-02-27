@@ -40,7 +40,7 @@ void show(){
   pushMatrix();
   translate(pos.x,pos.y,pos.z);
   noStroke();
-  fill(255);
+  fill(200);
   box(r);
   popMatrix();
 }

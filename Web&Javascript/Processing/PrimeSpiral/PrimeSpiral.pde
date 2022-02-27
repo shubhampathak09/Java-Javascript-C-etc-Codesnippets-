@@ -27,7 +27,7 @@ sponge=next;
 void draw()
 {
   
-  background(50);
+  background(51);
   stroke(255);
   noFill();
   lights();
