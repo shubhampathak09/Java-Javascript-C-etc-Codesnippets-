@@ -12,7 +12,7 @@ int xorgame(int k){
 	return -1;
 	
 }
-
+//ok
 
 // try observint the pattern from 1 to 10 will get the logic
 

@@ -29,6 +29,7 @@ vector<int>parent;
 
 bool dfs(int i,int c,int par){
 	
+	cout<<c<<endl;
 	
 	vis[i]=true;
 	
@@ -58,7 +59,8 @@ bool color_all(){
 		
 		if(!vis[i]){
 			
-			if(!dfs(i,1,-1))
+			bool solve=dfs(i,1,-1);
+			if(solve==false)
 			return false;
 		}
 	}
@@ -90,6 +92,12 @@ int main(){
 		
 		
 	}
+	
+	
+	bool solve=color_all;
+	
+	
+	cout<<solve<<endl;
 	
 	if(color_all){
 		for(int i=1;i<=n;i++){
