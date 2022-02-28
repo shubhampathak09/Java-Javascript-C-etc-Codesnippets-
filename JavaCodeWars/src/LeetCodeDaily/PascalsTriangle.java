@@ -27,13 +27,35 @@ public class PascalsTriangle {
          for(int j=1;j<i;j++){
              cur.add(prev.get(j-1)+prev.get(j));
          }
-
+         cur.add(1);
+         triangle.add(cur);
         }
 
-        return null;
+        return triangle;
     }
 
     public static void main(String[] args){
+
+        List<List<Integer>>ans=new ArrayList<>();
+
+
+        ans=generate(5);
+
+
+        for(int i=0;i<ans.size();i++){
+            for(Integer x:ans.get(i)){
+                System.out.print(x+" ");
+            }
+            System.out.println();
+
+        }
+        /*
+        1
+        1 1
+        1 2 1
+        1 3 3 1
+        1 4 6 4 1
+        */
 
 
     }
