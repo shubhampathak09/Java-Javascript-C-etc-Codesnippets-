@@ -10,23 +10,23 @@ class Orbit
  
  
  
- Orbit(float x_,float y_,float r_,Orbit p)
+ Orbit(float x_,float y_,float r_,float s,Orbit p)
  {
    
    x=x_;
    y=y_;
    r=r_;
    parent=p;
+   speed=s;
    child=null;
  }
  
  Orbit addChild(){
  
-   float newr=r*0.5;
+   float newr=r/3;
    float newx=x+r+newr;  // can do some variatiions here
    float newy=y;
-   child=new Orbit(newx,newy,newr,this);
-   speed=0.1;
+   child=new Orbit(newx,newy,newr,-2*speed,this);
    return child;
  }
  

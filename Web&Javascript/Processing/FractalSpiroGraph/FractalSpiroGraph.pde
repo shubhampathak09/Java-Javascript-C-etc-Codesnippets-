@@ -9,7 +9,7 @@ void setup(){
   size(600,600);
   path=new  ArrayList<PVector>();
   
-  sun=new Orbit(300,300,100,null);
+  sun=new Orbit(300,300,150,0.01,null);
   Orbit next=sun;
   
   for(int i=0;i<3;i++){
