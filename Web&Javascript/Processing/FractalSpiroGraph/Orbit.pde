@@ -1,8 +1,12 @@
+
+int k=-4;
+
 class Orbit
 {
  float x;
  float y;
  float r;
+ float n;
  Orbit child;
  Orbit parent;
  float speed;
@@ -10,14 +14,15 @@ class Orbit
  
  
  
- Orbit(float x_,float y_,float r_,float s,Orbit p)
+ Orbit(float x_,float y_,float r_,float n_,Orbit p)
  {
    
    x=x_;
    y=y_;
    r=r_;
+   n=n_;
    parent=p;
-   speed=s;
+   speed=radians(pow(k,n-1));
    child=null;
  }
  
@@ -26,7 +31,7 @@ class Orbit
    float newr=r/3;
    float newx=x+r+newr;  // can do some variatiions here
    float newy=y;
-   child=new Orbit(newx,newy,newr,-2*speed,this);
+   child=new Orbit(newx,newy,newr,n+1,this);
    return child;
  }
  
