@@ -24,6 +24,7 @@ class Orbit
    parent=p;
    speed=radians(pow(k,n-1));
    child=null;
+   angle=-PI/2;
  }
  
  Orbit addChild(){
@@ -45,7 +46,7 @@ class Orbit
    x=parent.x+rsum*cos(angle);
   y=parent.y+rsum*sin(angle);
    }
-  //ellipse(x2,y2,r2*2,r2*2);
+  
    
  }
  
