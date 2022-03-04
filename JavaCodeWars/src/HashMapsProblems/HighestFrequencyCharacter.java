@@ -14,8 +14,8 @@ public class HighestFrequencyCharacter {
 
         String s="babcccdbabcccd";
 
+       // b ->4  a->>2   c->6  d->2
 
-        
 
         for(int i=0;i<s.length();i++){
 
