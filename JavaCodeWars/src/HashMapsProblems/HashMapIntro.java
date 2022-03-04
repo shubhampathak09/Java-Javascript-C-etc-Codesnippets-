@@ -11,8 +11,11 @@ public class HashMapIntro {
 
     hm.put("India",120);
     hm.put("China",200);
+    hm.put("US",110);
+    hm.put("UK",80);
 
-
+    //this below will throw null pointer
+   System.out.println(hm.get("Ukraine").toString());
 
 
 }
