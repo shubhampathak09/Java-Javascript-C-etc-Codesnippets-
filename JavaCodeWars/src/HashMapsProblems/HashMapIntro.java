@@ -15,7 +15,15 @@ public class HashMapIntro {
     hm.put("UK",80);
 
     //this below will throw null pointer
-   System.out.println(hm.get("Ukraine").toString());
+ //  System.out.println(hm.get("Ukraine").toString());
+
+        System.out.println(hm);
+
+        for(String s:hm.keySet()){
+            System.out.println(s);
+            System.out.println(hm.get(s));
+        }
+
 
 
 }
