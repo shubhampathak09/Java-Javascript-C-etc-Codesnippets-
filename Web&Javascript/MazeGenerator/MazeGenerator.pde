@@ -3,6 +3,9 @@ int cols,rows;
 
 ArrayList<Cell>grid=new ArrayList<>();
 
+ArrayList<Cell>stack=new ArrayList<Cell>();
+
+
 Cell current=new Cell();;
 void setup()
 {
@@ -11,7 +14,7 @@ void setup()
   cols=floor(width/w);
   rows=floor(height/w);
   
-  frameRate(5);
+ // frameRate(5);
   
   for(int j=0;j<rows;j++)
   {
@@ -41,10 +44,17 @@ void draw()
   {
     next.visited=true;
     
+    
+    stack.add(current);
+    
     // call remove walls
     removeWall(current,next);
     
     current=next;
+  }else if(stack.size()>0)
+  {
+    
+    current =stack.remove(stack.size()-1);
   }
   
 }
@@ -84,3 +94,5 @@ void removeWall(Cell a,Cell b)
  }
  
 }
+
+// try other algorithms as well like kruskals etc
