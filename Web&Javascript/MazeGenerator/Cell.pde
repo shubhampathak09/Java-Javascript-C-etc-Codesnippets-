@@ -13,6 +13,40 @@ class Cell
     i=x;
     j=y;
   }
+  
+  Cell checkNeighbors()
+  {
+    ArrayList<Cell>neighbors=new ArrayList();
+    
+    Cell top=grid.get(index(i,j-1));
+    Cell right=grid.get(index(i+1,j-1));
+    Cell bottom=grid.get(index(i,j+1));
+    Cell left=grid.get(index(i-1,j));
+    
+    
+    if(top!=null&&!top.visited){
+      neighbors.add(top);
+    }
+    if(right!=null&&!right.visited){
+      neighbors.add(right);
+    }
+    if(bottom!=null&&!bottom.visited){
+      neighbors.add(bottom);
+    }
+    if(left!=null&&!left.visited){
+      neighbors.add(left);
+    }
+    
+    if(neighbors.size()>0)
+    {
+      int r=floor(random(0,neighbors.size()));
+      return neighbors.get(r);
+    }else{
+      return null;
+    }
+    
+  }
+  
   void show()
   {
     int x=this.i*w;
