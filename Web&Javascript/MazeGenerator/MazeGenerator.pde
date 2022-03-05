@@ -22,7 +22,7 @@ void setup()
 }
 
 void draw()
-{
+ {
  
   background(51);
   for(int i=0;i<grid.size();i++)

@@ -17,6 +17,6 @@ class Cell
     int y=this.j*w;
     stroke(255);
     noFill();
-    rect(x,y,w,w);
+    line(x,y,x+w,y);
   }
 }
