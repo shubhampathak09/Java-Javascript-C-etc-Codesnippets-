@@ -19,7 +19,7 @@ class Cell
     ArrayList<Cell>neighbors=new ArrayList();
     
     Cell top=grid.get(index(i,j-1));
-    Cell right=grid.get(index(i+1,j-1));
+    Cell right=grid.get(index(i+1,j));
     Cell bottom=grid.get(index(i,j+1));
     Cell left=grid.get(index(i-1,j));
     
@@ -67,9 +67,19 @@ class Cell
     
     if(this.visited==true)
     {
+      noStroke();   // looks an important thing
       fill(255,0,255,100);
       rect(x,y,w,w);
     }
     
   }
+  
+  void highlight(){
+    
+    noStroke();
+    fill(0,0,255,100);
+    rect(this.i*w,this.j*w,w,w);
+    
+  }
+  
 }

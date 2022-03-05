@@ -33,11 +33,17 @@ void draw()
   grid.get(i).show();
   
   current.visited=true;
+  current.highlight();
+  
   Cell next=current.checkNeighbors();
   
   if(next!=null)
   {
     next.visited=true;
+    
+    // call remove walls
+    removeWall(current,next);
+    
     current=next;
   }
   
@@ -49,4 +55,32 @@ int index(int i,int j)
     return 0;
 }
 return i+j*cols;
+}
+
+
+void removeWall(Cell a,Cell b)
+{
+  //System.out.println("1");
+ int x=a.i-b.i;
+ if(x==1)
+ {
+   a.walls[3]=false;
+   b.walls[1]=false;
+ }else if(x==-1)
+ {
+  a.walls[1]=false;
+  b.walls[3]=false;
+ }
+  
+ int y=a.j-b.j;
+ if(y==1)
+ {
+   a.walls[2]=false;
+   b.walls[0]=false;
+ }else if(y==-1)
+ {
+   a.walls[0]=false;
+   b.walls[2]=false;
+ }
+ 
 }
