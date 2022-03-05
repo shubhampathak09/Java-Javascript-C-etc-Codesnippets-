@@ -2,6 +2,7 @@ class Cell
 {
  int i;
  int j;
+ boolean[] walls={true,true,true,true};
  
   Cell()
   {
@@ -17,9 +18,16 @@ class Cell
     int y=this.j*w;
     stroke(255);
     noFill();
+    if(this.walls[0]==true)
     line(x,y,x+w,y);
-    line(x,y,x,y+w);
-    line(x,y+w,x+w,y+w);
-    line(x+w,y,x+w,y+w);
+    
+    if(this.walls[1]==true)
+    line(x+w,y,x+w,y);  //right
+    
+    if(this.walls[2]==true)
+    line(x+w,y+w,x,y+w);
+    
+    if(this.walls[3]==true)
+    line(x,y+w,x,y);
   }
 }
