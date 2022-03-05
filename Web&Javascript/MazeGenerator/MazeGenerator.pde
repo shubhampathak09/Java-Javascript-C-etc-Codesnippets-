@@ -3,6 +3,7 @@ int cols,rows;
 
 ArrayList<Cell>grid=new ArrayList<>();
 
+Cell current=new Cell();;
 void setup()
 {
   
@@ -19,6 +20,7 @@ void setup()
     }
   }
   
+  current=grid.get(0);
 }
 
 void draw()
@@ -27,4 +29,6 @@ void draw()
   background(51);
   for(int i=0;i<grid.size();i++)
   grid.get(i).show();
+  
+  current.visited=true;
 }

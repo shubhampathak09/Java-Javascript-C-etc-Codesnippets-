@@ -3,6 +3,7 @@ class Cell
  int i;
  int j;
  boolean[] walls={true,true,true,true};
+ boolean visited=false;
  
   Cell()
   {
@@ -17,7 +18,7 @@ class Cell
     int x=this.i*w;
     int y=this.j*w;
     stroke(255);
-    noFill();
+ //   noFill();
     if(this.walls[0]==true)
     line(x,y,x+w,y);
     
@@ -29,5 +30,12 @@ class Cell
     
     if(this.walls[3]==true)
     line(x,y+w,x,y);
+    
+    if(this.visited==true)
+    {
+      fill(255,0,255,100);
+      rect(x,y,w,w);
+    }
+    
   }
 }
