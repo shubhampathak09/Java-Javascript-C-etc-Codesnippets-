@@ -18,5 +18,8 @@ class Cell
     stroke(255);
     noFill();
     line(x,y,x+w,y);
+    line(x,y,x,y+w);
+    line(x,y+w,x+w,y+w);
+    line(x+w,y,x+w,y+w);
   }
 }
