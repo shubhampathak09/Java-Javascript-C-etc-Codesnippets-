@@ -82,6 +82,22 @@ public class Copof {
 -algorithm behind jqava colleection? how is it done
 
 
+// develop web application restful scala/java
+authentication systems saml oau
+microsericces architecture
+
+source control and git
+nosql and realtional db
+development with linux env
+eralng /elixir
+ci/cd flows
+aws
+videogame industry
+online commercial enviroment
+database design nosql
+html.css js
+differnet methodologies archtecture
+
 
 
  */
