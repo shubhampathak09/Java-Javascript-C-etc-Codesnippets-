@@ -78,7 +78,7 @@ int main(){
 	
 	bool ans=visit_all();
 	
-//	cout<<ans;
+	cout<<ans;
 	
 	cout<<endl;
 	
