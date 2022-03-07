@@ -58,9 +58,12 @@ int main(){
 	
 	
 	int current=n; 
-	 stack<int>stk;
+    stack<int>stk;
 	 
-	 
+    
+	bfs();
+	
+		 
 	while(current!=-1){
 		
 	stk.push(current);
@@ -72,6 +75,8 @@ int main(){
 	
 	cout<<stk.size();
 	
+	cout<<endl;
+	
 	while(!stk.empty()){
 		
 		cout<<stk.top()<<" ";
@@ -79,5 +84,18 @@ int main(){
 	}
 	 
 	 
+
 	 // test case
+/*	 
+5 5
+1 2
+1 3
+1 4
+2 3
+5 4
+//3
+//1 4 5
+
+*/
+
 }
