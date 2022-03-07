@@ -13,22 +13,22 @@ vector<int> parent;
  
 bool dfs(int u, int p)
 {
-	vis[u] = true;
-	parent[u] = p;
-	for(auto v: g[u])
+	vis[u] = true;  // basic depth first search
+	parent[u] = p;   // store the parent
+	for(auto v: g[u])    // this is process the vertex
 	{
-		if(v == p) continue;
-		if(vis[v]) 
+		if(v == p) continue;    // of [arent conitinue
+		if(vis[v])               // if vis and not parent then cycle core logic 
 		{
-			sv = v; 
+			sv = v;             // store the endpoint to print cycle later
 			ev = u; 
 			return true;
 		} 
-		if(!vis[v]) 
+		if(!vis[v])                // if not visited do dfs 
 			if(dfs(v,u)) 
 				return true;
 	}
-	return false;
+	return false;           // no cycle found
 }
  
  
@@ -37,9 +37,9 @@ bool visit_all()
 	for(int i = 1; i <= n; ++i)
 	{
 		if(!vis[i])
-			if(dfs(i,-1)) return true;
+			if(dfs(i,-1)) return true;                   // return true
 	}
-	return false;
+	return false;                    
 }
  // int32 vs int main
  
@@ -48,8 +48,8 @@ int32_t main()
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	cin >> n >> m;
-	g.resize(n+1);
-	vis.resize(n+1);
+	g.resize(n+1);  // resize function
+	vis.resize(n+1);  // resize function
 	parent.resize(n+1);
 	for(int i =0 ; i < m; ++i)
 	{
@@ -65,9 +65,14 @@ int32_t main()
 		return 0;
 	}
  
+ 
+   for(int i=1;i<=n;i++)
+   cout<<parent[i]<<" ";
+   
 	int tv = ev;
 	vector<int> ans;
 	ans.push_back(ev);
+	
 	while(tv != sv)
 	{
 		ans.push_back(parent[tv]);
