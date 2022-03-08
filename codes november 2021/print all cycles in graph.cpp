@@ -88,6 +88,7 @@ for(int i=1;i<=n;i++){
 
 
 for(int i=1;i<=cyclenumber;i++){
+//	cout<<"cycle..";
 	for(int x:cycles[i]){
 		cout<<x<<" ";
 	}
