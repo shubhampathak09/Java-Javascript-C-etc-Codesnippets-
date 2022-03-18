@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//vfv
+
 int main()
 {
 	int a[]={100,11,445,1,330,3000};
