@@ -4,7 +4,7 @@ public class MinChangesToMakeArrayIncreasing {
 
     // VARIATION OF lis PROBLEM
 
-    
+
 
     public static void main(String[] args){
 
