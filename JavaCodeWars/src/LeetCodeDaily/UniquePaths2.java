@@ -23,6 +23,8 @@ public static int solution(int[][] obstacles) {
 
     int[][] dp = new int[n][m];
 
+    if(obstacles[n-1][m-1]==0)
+        return 0;
 
     dp[n - 1][m - 1] = 0;
 
