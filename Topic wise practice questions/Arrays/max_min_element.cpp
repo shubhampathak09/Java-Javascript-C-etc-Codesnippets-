@@ -3,6 +3,8 @@ using namespace std;
 
 //vfv
 
+// 3129  ->  3 
+
 int main()
 {
 	int a[]={100,11,445,1,330,3000};
