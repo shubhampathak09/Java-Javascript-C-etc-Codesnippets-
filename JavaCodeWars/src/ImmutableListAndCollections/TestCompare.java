@@ -1,4 +1,4 @@
-package ImmutableList;
+package ImmutableListAndCollections;
 
 import java.util.ArrayList;
 import java.util.Collections;

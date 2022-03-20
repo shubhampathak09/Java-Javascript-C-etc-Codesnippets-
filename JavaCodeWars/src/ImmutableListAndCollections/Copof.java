@@ -1,4 +1,4 @@
-package ImmutableList;
+package ImmutableListAndCollections;
 
 
 public class Copof {
