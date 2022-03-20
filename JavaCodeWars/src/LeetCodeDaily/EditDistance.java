@@ -2,7 +2,7 @@ package LeetCodeDaily;
 
 public class EditDistance {
 
-
+  public static int dp[][]=new int [1001][1001];
 
     public static int Solution(String a,String b,int n,int m){
 
@@ -12,15 +12,18 @@ public class EditDistance {
         if(m==0)
             return n;
 
+        if(dp[n][m]!=0)
+            return dp[n][m];
+
         if(a.charAt(n-1)==b.charAt(m-1))
-            return Solution(a,b,n-1,m-1);
+            return dp[n][m]=Solution(a,b,n-1,m-1);
 
         else{
 
 
             // do insert remove and intercahnge
 
-            return 1 + Math.min(Solution(a,b,n-1,m),Math.min(Solution(a,b,n,m-1),Solution(a,b,n-1,m-1)));
+            return dp[n][m]=1 + Math.min(Solution(a,b,n-1,m),Math.min(Solution(a,b,n,m-1),Solution(a,b,n-1,m-1)));
         }
 
 
