@@ -15,6 +15,19 @@ public class Lcm {
 
     }
 
+
+    public static  int solution(int[] arr,int idx){
+
+     if(idx== arr.length)
+         return arr[idx-1];
+
+     int a=arr[idx];
+     int b=solution(arr,idx+1);
+
+     return (a*b)/gcd(a,b);
+
+    }
+
 public static void main(String[ ] args){
 
 
@@ -28,6 +41,7 @@ public static void main(String[ ] args){
 
     // lcm(a,b) = (a*b)/gcd(a,b)
 
+    System.out.println(solution(a,0));
 }
 
 }
