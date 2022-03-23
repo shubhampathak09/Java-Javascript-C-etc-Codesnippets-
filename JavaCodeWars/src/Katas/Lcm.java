@@ -41,6 +41,7 @@ public static void main(String[ ] args){
 
     // lcm(a,b) = (a*b)/gcd(a,b)
 
+    // 
     System.out.println(solution(a,0));
 }
 
