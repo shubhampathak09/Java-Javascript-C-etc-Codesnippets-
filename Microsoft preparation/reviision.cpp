@@ -78,3 +78,40 @@ int maxdepth(struct node*root){
 	cout<<mx;   // max woidtgh
  }
 
+
+q.push(root);
+
+while(!q.empty()){
+	
+	
+	
+	int n=q.size();
+	
+	
+	for(int i=1;i<=n;i++){
+		
+		
+		u=q.front();
+		q.pop();
+		s.push(u->data);
+		
+		if(u->left)
+		q.push(root->left);
+		if(u->rihg)
+		q,push(root->rigjt);
+	}
+	s.push(-900);
+	
+}
+
+
+
+// min heap syntax
+
+
+priority_queue<int,greater<int>pq;  // min heap
+
+priority_queue<int> // MAX HEAP
+
+
+
