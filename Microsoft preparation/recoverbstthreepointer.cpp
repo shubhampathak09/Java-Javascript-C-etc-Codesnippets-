@@ -1,6 +1,9 @@
 // recover BST
 // objective should be to get good in programming in general
 // no tension only tought process
+// cantor set problem most efficient wAY TO SOLVE THIS
+
+
 
 
 #include<bits/stdc++.h>
