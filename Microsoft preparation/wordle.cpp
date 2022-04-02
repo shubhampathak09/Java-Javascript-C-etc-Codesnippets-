@@ -18,21 +18,33 @@ vector<string>dict;
 
 void read(){
 	
+//	
+//    FILE*fp=fopen("in.txt","r");
+//    
+//    if(fp==NULL)
+//    exit(EXIT_FAILURE);
+//
+//	char *line=NULL;  
+//	size_t len=0;
 	
-    FILE*fp=fopen("in.txt","r");
     
-    if(fp==NULL)
-    exit(EXIT_FAILURE);
-
-	char *line=NULL;  
-	size_t len=0;
+	ifstream inFile;
 	
-    		
-	while(getline(&line,&len,fp))!=-1){
+	inFile.open("C://Users//91954//Documents//Codes For Javascript Java and C++//Microsoft preparation//in.txt",ios::in);
+	
+	if(inFile.fail()){
+		cerr<<"Error opening file"<<endl;
+		inFile.close();
+		exit(1);
+	}
+	
+	string line;
+			
+	while(getline(inFile,line)){
 		
-		assert((int) s.length()==8);
+		assert((int) line.length()==8);
 		
-		dict.push_back(s.substr(0,8));
+		dict.push_back(line.substr(0,8));
 		
 	//	cout<<dict.size();
 		
@@ -41,9 +53,7 @@ void read(){
 		}
 		
 	}
-	fclose(fp);
-	if(line)
-	free(line);
+	inFile.close();
 
 }
 
