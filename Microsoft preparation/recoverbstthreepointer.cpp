@@ -1,4 +1,6 @@
 // recover BST
+// objective should be to get good in programming in general
+// no tension only tought process
 
 
 #include<bits/stdc++.h>
