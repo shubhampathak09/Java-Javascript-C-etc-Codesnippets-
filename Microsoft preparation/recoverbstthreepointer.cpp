@@ -97,3 +97,18 @@ inorder(root);
 }
 
 
+
+/*  kata get nth node in linked list  basic recursion  approach
+ public static int getNth(Node n, int index) throws Exception{
+    // WORK HERE
+    
+    if(index==0)
+      return n.data;
+    
+    Node curr=n;
+    curr=curr.next;
+    
+    return getNth(curr,index-1);
+  }
+}
+*/
