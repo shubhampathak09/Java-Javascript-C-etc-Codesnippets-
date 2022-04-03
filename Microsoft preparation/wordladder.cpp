@@ -22,9 +22,9 @@ int solve()
 	
 	string ends="plea";
 	
-	q.push({start,0});
+	q.push({start,1});
 	
-	int level=0;
+	//int level=1;
 	
 	while(!q.empty()){
 		
@@ -49,7 +49,7 @@ int solve()
 			
 			if(curword==ends){
 				
-				cout<<curr.second;
+				cout<<"length of the shortest chain is.."<<curr.second;
 				return curr.second;
 				
 			}
