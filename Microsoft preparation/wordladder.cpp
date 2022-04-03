@@ -32,7 +32,7 @@ int solve()
 		
 		int n=q.size();
 		
-		cout<<n;
+	//	cout<<n;
 		
 		for(int i=1;i<=n;i++){
 			
@@ -56,13 +56,16 @@ int solve()
 			
 			for(int i=0;i<curword.length();i++){
 				
+				string formword=curword;
+				
 				for(char x='a';x<='z';x++){
 					
-					curword[i]=x;
+					formword[i]=x;
 					
-					if(ss.find(curword)!=ss.end()){
+					if(ss.find(formword)!=ss.end()){
 						
-						q.push({curword,depth+1});
+						q.push({formword,depth+1});
+						ss.erase(formword);
 						
 					}
 				}
@@ -81,12 +84,40 @@ int solve()
 }
 
 
-int main(){
+
+
+/*
+void generateWord(string s){
 	
+	int count=0;
+//	string old=s;
+	
+	for(int i=0;i<s.length();i++){
+		
+		string change=s;
+		
+		for(char x='a';x<='z';x++){
+		
+		change[i]=x;
+		
+		cout<<change<<endl;;
+			
+		}
+		cout<<"end.."<<endl;
+		
+	}
+	
+	return;
+}
+*/
+int main(){
+//	generateWord("cat");
 	
 	int ans=solve();
+
+
 	
 	
-	//cout<<ans;
+//	cout<<ans;
 	
 }
