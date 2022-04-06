@@ -50,6 +50,10 @@ public class MaxDiffNodeAncestor {
     public static void main(String[] args){
 
 
+        String s="\"help\"";
+
+        System.out.println(s);
+
         // shit
 
 
