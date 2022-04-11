@@ -57,5 +57,19 @@ int main(){
 	
 	
 	//test
+
+
+// problems to practise
+// rotate a linked list
+// add 1 to linked list
+// add 2 numbers rep by linked listed
+// check if ll is palindrome
+//clone a linked list
+//recover a bst
+// reverse in k pair
+// merrge k sorted linked lists
+// insertion sort linked list
+// merge sort linked list
+
 	
 }
