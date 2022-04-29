@@ -10,9 +10,9 @@ public class LongestSubstringWithAtleasKuniqueCharacters {
         HashMap<Character, Integer> hm = new HashMap<>();
 
 
-        String s = "asscssdcsdvscasxavf";
+        String s = "aabbcdbca";
 
-        int k = 3;
+        int k = 2;
 
         int  i=-1;
         int j=-1;
