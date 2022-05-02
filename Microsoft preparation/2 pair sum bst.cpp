@@ -38,5 +38,21 @@ storeInorder(root1,vect1);
 storeInorder(root2,vect2);
 
 int s=0;	
+int e=vect2.size();
+int target=10;
+while(s<vect1.size()&&e>=0){
 	
+	if(vect1[s]+vect2[e]==target){
+		cout<<vect1[s]<<" "<<vect2[e];
+		s++;
+		e--;
+	}
+	else if(vect1[s]+vect2[e]<target){
+		s++;
+	}else
+	{
+		e--;
+	}
+}
+//done 	
 }
