@@ -1,3 +1,5 @@
+// ratos ,ore btk
+
 //#include<bits/stdc++.h>
 //using namespace std;
 //
@@ -75,7 +77,7 @@ vector<int>gr[N];
 int vis[N];
 int n,m;
 
-void paths(int curr,int cnt){
+void paths(int curr,int cnt,vector<int>&ans){
 	
 	if(cnt==n){
 		hp=true;
@@ -83,12 +85,15 @@ void paths(int curr,int cnt){
 	}
 	
 	vis[curr]=1;
+	ans.push_back(curr);
+	
 	for(auto x:gr[curr]){
 		if(vis[x]==false){
 			paths(x,cnt+1);
 		}
 	}
 	vis[curr]=0;
+	ans.pop_back();
 	return;
 }
 
@@ -104,11 +109,10 @@ int main(){
 		gr[y].push_back(x);
 	}
 	
-//	for(int i=0;i<n;i++){
-//		paths(i,1);
-//	}
-     
-	paths(1,1); 
-	 	
+	for(int i=0;i<n;i++){
+		paths(i,1);
+	}
+	
 	cout<<hp;
 }
+// we shall combe back to this okkk?
