@@ -41,18 +41,19 @@ int main(){
 int hd=0;
 map<int,vector<int>>mp;
 
-struct node*root=new node(1);
+struct node*root=new node(3);
 
 root->left=new node(2);
-
-
-
+ 
+root->left->right=new node(1); 
 verticaltraversal(root,mp,hd);
 	
 	
 map<int,vector<int>>::iterator it;
 
 for(it=mp.begin();it!=mp.end();++it){
+	
+ sort(mp[it->first].begin(),mp[it->first].end());
 	
 for(int i=0;i<it->second.size();i++){
 	
