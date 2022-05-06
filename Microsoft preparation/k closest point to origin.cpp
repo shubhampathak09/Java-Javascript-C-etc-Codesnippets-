@@ -1,3 +1,13 @@
+/*
+vvi
+ bool operator () (pair<int, string> a, pair<int, string>b) const{
+        if(a.first<b.first) return true; // frequency first
+        // if frequency is same then compare its lexicogrphical order
+        else if(a.first == b.first && a.second>b.second) return true; 
+        return false;
+    }
+*/
+
 class Solution {
 public:
     vector<vector<int>> kClosest(vector<vector<int>>& points, int k) {
