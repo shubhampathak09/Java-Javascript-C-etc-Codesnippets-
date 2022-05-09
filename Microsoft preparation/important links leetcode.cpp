@@ -14,7 +14,15 @@ hashmap design
 
 https://massivealgorithms.blogspot.com/2018/11/leetcode-904-fruit-into-baskets.html
 
+ https://lnkd.in/dXB7xbsc - https://lnkd.in/dhgnCHDh - https://lnkd.in/dV65F9s2 - 
+ https://lnkd.in/dmMsTEXb - 
+ https://lnkd.in/dyCbzm7P - https://lnkd.in/dvPHRbi3
+ https://lnkd.in/d5C5AfDB 2)
+For Behavioural Rounds: -
+   https://lnkd.in/daWKBYxu - https://lnkd.in/d2VThaPC - https://lnkd.in/dUAGGSRg - https://lnkd.in/dV9kQ2e9
 
 
 
 
+
+https://walkccc.me/LeetCode/problems/2174/
