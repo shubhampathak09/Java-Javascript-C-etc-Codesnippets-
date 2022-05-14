@@ -22,6 +22,10 @@ For Behavioural Rounds: -
    https://lnkd.in/daWKBYxu - https://lnkd.in/d2VThaPC - https://lnkd.in/dUAGGSRg - https://lnkd.in/dV9kQ2e9
 
 
+// baktrackin problems
+//matrix
+//array
+//bit manipulation
 
 
 
