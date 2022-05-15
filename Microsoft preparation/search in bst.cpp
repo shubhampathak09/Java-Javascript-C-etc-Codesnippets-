@@ -30,7 +30,23 @@ node*search(node*root,int val){
 }
 
 
-
+node*insert(node*root,int val){
+	
+	if(root==NULL)
+	return new node(val);
+	
+	if(val<root->data)
+	root->left=insert(root->left,val);
+	
+	else
+	root->right=insert(root->right,val);
+	
+	
+	return root;
+	
+	
+	
+}
 
 
 int main(){
