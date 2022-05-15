@@ -73,6 +73,52 @@ void inorder(struct node*root){
 }
 
 
+struct node *deleteNode(node*root,int key){
+	
+	if(root==NULL)
+	return NULL;
+	
+	
+	if(key<root->data){
+		return deleteNode(root->left,key);
+		
+	}
+	else if(key>root->data){
+		return deleteNode(root->right,key);
+	}
+	else
+	{
+		
+		if(root->left==NULL && root->right==NULL)
+		return NULL;
+		
+		else if(root->left==NULL)
+		{
+			node*temp=root->right;
+			free(root);
+			return temp;
+		}
+		else if(root->right==NULL){
+			node*temp=root->left;
+			free(root);
+			return temp;
+		}
+		
+		
+		struct node*temp=minNode(root->right);
+		
+		
+		root->data=temp->data;
+		
+		root->right=deleteNode(root->right,temp->data);
+		
+	 } 
+ 
+	return root;
+	
+	 
+}
+
 int main(){
 	
 	struct node*root=NULL;
@@ -107,5 +153,12 @@ if(mini!=NULL)
 {
 	cout<<"minimum value is.."<<mini->data;
 }
+
+
+root=deleteNode(root,7);
+
+cout<<endl;
+
+inorder(root);
 
 }
