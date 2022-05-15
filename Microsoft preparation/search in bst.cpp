@@ -77,6 +77,14 @@ root=	insert(root,2);
 root=	insert(root,1);
 	
 	
+	
 	inorder(root);
 	
+ node*s1=search(root,3);
+ 
+ cout<<endl;
+ 
+ if(root!=NULL)
+ cout<<"found";
+
 }
