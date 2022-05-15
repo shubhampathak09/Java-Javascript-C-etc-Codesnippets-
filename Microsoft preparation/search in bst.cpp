@@ -48,6 +48,17 @@ node*insert(node*root,int val){
 	
 }
 
+node *minNode(node*root){
+	
+	node*curr=root;
+	
+	
+	while(curr!=NULL && curr->left!=NULL){
+		curr=curr->left;
+	}
+	
+	return curr;
+}
 
 void inorder(struct node*root){
 	
@@ -86,5 +97,15 @@ root=	insert(root,1);
  
  if(root!=NULL)
  cout<<"found";
+
+
+struct node*mini=minNode(root);
+
+cout<<endl;
+
+if(mini!=NULL)
+{
+	cout<<"minimum value is.."<<mini->data;
+}
 
 }
