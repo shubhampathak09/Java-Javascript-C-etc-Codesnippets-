@@ -80,11 +80,11 @@ struct node *deleteNode(node*root,int key){
 	
 	
 	if(key<root->data){
-		return deleteNode(root->left,key);
+		root->left= deleteNode(root->left,key);
 		
 	}
 	else if(key>root->data){
-		return deleteNode(root->right,key);
+		root->right= deleteNode(root->right,key);
 	}
 	else
 	{
