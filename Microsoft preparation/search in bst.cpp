@@ -49,8 +49,35 @@ node*insert(node*root,int val){
 }
 
 
+void inorder(struct node*root){
+	
+	if(root==NULL)
+	return;
+	
+	inorder(root->left);
+	
+	cout<<root->data<<" ";
+	
+	inorder(root->right)
+;
+}
+
+
 int main(){
 	
+	struct node*root=NULL;
 	
+	insert(root,6);
+	
+	insert(root,3);
+	
+	insert(root,7);
+	
+	insert(root,2);
+	
+	insert(root,1);
+	
+	
+	inorder(root);
 	
 }
