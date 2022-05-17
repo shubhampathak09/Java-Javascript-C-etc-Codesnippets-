@@ -36,4 +36,41 @@ for(int i=0;i<s.length;i++){
 */
 
 
-#
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+	
+	
+	string sample="lee(t(c)o)de)";
+	stack<int> s;
+	
+	
+	for(int i=0;i<sample.length();i++){
+		
+		if(sample[i]=='('){
+			s.push(i); // pushes index
+		}else if(sample[i]==')'){
+			if(!s.empty()){
+				s.pop();
+			}else
+			{
+				sample[i]='?';  // when start wtij )))
+			}
+		}
+	}
+	
+	
+	while(!s.empty()){
+		
+		sample[s.top()]='?';
+		s.pop();
+	}
+	
+	
+	sample.erase(remove(sample.begin(),sample.end(),'?'),sample.end());
+	
+	cout<<sample;
+	
+}
