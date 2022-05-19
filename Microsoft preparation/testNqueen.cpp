@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace  std;
 
+bool globalCounter=0;
+
 
 void printb(int n,int board[][20]){
 	
@@ -10,7 +12,7 @@ void printb(int n,int board[][20]){
 		}
 		cout<<endl;
 	}
-	
+	cout<<endl;
 }
 
 
@@ -48,15 +50,18 @@ bool safe(int board[][20],int n,int i,int j){
 }
 
 
-bool solveQueen(int n,int board[][20],int i)
+int solveQueen(int n,int board[][20],int i)
 {
 		
 	
 	if(i==n){
-		
+       // globalCounter++;		
 		printb( n,board);
-		return true;
+		return 1;
 	}
+	
+	int ways=0;
+	
 	for(int j=0;j<n;j++){
 		
 		
@@ -64,16 +69,14 @@ bool solveQueen(int n,int board[][20],int i)
 			
 			board[i][j]=1;
 			
-			bool solve=solveQueen(n,board,i+1);
-			
-			if(solve==true){
-				
-				return true;
-			}
+			ways+=solveQueen(n,board,i+1);
+			//bool solve=solveQueen(n,board,i+1);
+		 
+		 
 			board[i][j]=0;
 		}
 	}
-	return false;
+	return ways;
 }
 //
 //bool solveQueen(int n,int board[][20],int i){
@@ -110,6 +113,6 @@ int main(){
 	
 	cout<<ans;
 	
-	
+//	cout<<globalCounter;
 	
 }
