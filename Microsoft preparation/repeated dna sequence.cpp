@@ -25,7 +25,9 @@ int main(){
 	int n=s.length();
 	
 	
-	int mask=1<<n;
+	long long mask=1<<n;
+	
+	cout<<mask;
 	
 	map<string,int>mp;
 	
@@ -34,7 +36,7 @@ int main(){
 		int crmask=i;
 	    if(countset(crmask)==10)
 		  {
-		  	cout<<crmask;
+		  //	cout<<crmask;
 			string crr=""; 	
 		for(int j=0;j<s.length();j++){
 			if(crmask & (1<<j)){
