@@ -53,3 +53,21 @@ int main(){
 	
 	//tsp algorithm
 }
+
+
+
+// number unique bst
+
+//  russian doll envelopees
+
+// box tilling
+
+// overallping bridges
+
+//dice throw
+
+//snake and  ladder
+
+// minesweeper again
+
+
