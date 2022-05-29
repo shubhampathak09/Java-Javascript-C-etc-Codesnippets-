@@ -1,0 +1,192 @@
+ Chess Game
+ {
+
+ChessBoard chessBoard;
+Player[] players;
+Player currentPlayer;
+List<Move> movesList;
+GameStatus gameStatus;
+
+
+public boolean playerMove(CellPosition fromPosition,Cellposition toPosition,Piece pice);
+public boolean endGame();
+private void changeTurn();
+
+
+ }
+
+
+ public class Player{
+
+Account account;
+Color color;
+Time timeLeft;
+
+ }
+
+public class Account{
+
+
+String username;
+String password;
+
+String name;
+String email;
+Strinng phone;
+
+}
+
+public enum Color{
+    BLACK,
+    WHITE
+}
+public class Time{
+    int min;
+    int sec;
+}
+
+
+public enum GameStatus{
+    ACTIVE,
+    PAUSED,
+    ABANDONED,
+    BALCK_WIN,
+    WHITE_WIN
+}
+
+public class ChessBoard{
+    List<List<Cell>>board;
+
+    public void resetBoard();  //originall configuartion base
+    public void updateBoard(); 
+}
+
+public class Cell{
+    Color color;
+    Piece piece;
+    CellPosition position;
+}
+
+public class CellPosition{
+    char ch;
+    int i;
+}
+
+public class Move{
+    Player turn;
+    Peiece piece;
+    CellPosition start;
+    CellPosition end;
+    Pience killedPiece;
+}
+
+public abstract class Piece{
+
+Color color;
+
+// move method
+public boolean move(CellPosition fromPosition,CellPosition toCellPosition);
+
+// possibleMoves
+public List<CellPosition> possibleMoves(CellPosition fromPosition,CellPosition toPosition);
+
+public boolean validate(CellPosition fromPosition,CellPosition toPosition);
+
+// ROOK BisjopKnihjy Queen King Pawn etc
+//validate
+
+}
+
+public Knight extends Peice{
+
+
+// move method
+public boolean move(CellPosition fromPosition,CellPosition toCellPosition);
+
+// possibleMoves
+public List<CellPosition> possibleMoves(CellPosition fromPosition,CellPosition toPosition);
+
+public boolean validate(CellPosition fromPosition,CellPosition toPosition);
+
+
+}
+
+
+public Rook extends Peice{
+
+
+// move method
+public abstract boolean move(CellPosition fromPosition,CellPosition toCellPosition);
+
+// possibleMoves
+public abstract List<CellPosition> possibleMoves(CellPosition fromPosition,CellPosition toPosition);
+
+public abstract boolean validate(CellPosition fromPosition,CellPosition toPosition);
+
+
+} 
+
+
+public Bishop extends Peice{
+
+
+// move method
+public boolean move(CellPosition fromPosition,CellPosition toCellPosition);
+
+// possibleMoves
+public List<CellPosition> possibleMoves(CellPosition fromPosition,CellPosition toPosition);
+
+public boolean validate(CellPosition fromPosition,CellPosition toPosition);
+
+
+}
+
+
+public Queen extends Peice{
+
+
+// move method
+public boolean move(CellPosition fromPosition,CellPosition toCellPosition);
+
+// possibleMoves
+public List<CellPosition> possibleMoves(CellPosition fromPosition,CellPosition toPosition);
+
+public boolean validate(CellPosition fromPosition,CellPosition toPosition);
+
+
+}
+
+
+public King extends Peice{
+
+
+// move method
+public boolean move(CellPosition fromPosition,CellPosition toCellPosition);
+
+// possibleMoves
+public List<CellPosition> possibleMoves(CellPosition fromPosition,CellPosition toPosition);
+
+public boolean validate(CellPosition fromPosition,CellPosition toPosition);
+
+
+}
+
+
+public Pawn extends Peice{
+
+
+// move method
+public boolean move(CellPosition fromPosition,CellPosition toCellPosition);
+
+// possibleMoves
+public List<CellPosition> possibleMoves(CellPosition fromPosition,CellPosition toPosition);
+
+public boolean validate(CellPosition fromPosition,CellPosition toPosition);
+
+
+}
+
+// develop chess.com 
+
+ 
+
