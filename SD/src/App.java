@@ -29,7 +29,7 @@ public class App {
                 System.out.println("entert reciver account number");
                 int toAcc=sc.nextInt();
                 System.out.println("Enter the amount to send");
-                BigDecimal amount=sc.nextBigDecimal();
+                 amount=sc.nextBigDecimal();
                 walletService.tranfer(fromrAcc,toAcc,amount);
                 break;
 
