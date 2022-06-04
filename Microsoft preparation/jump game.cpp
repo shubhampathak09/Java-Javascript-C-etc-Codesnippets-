@@ -8,6 +8,19 @@ using namespace  std;
 
 // store 
 
+bool canreach(vector<int>&nums){
+	
+	int n=nums.size();
+	
+	for(int i=n-1;i>=0;i--){
+		
+		if(nums[i]+i>=n)
+		n=i;
+		
+	}
+	return n==0;
+}
+
 int main(){
 	
 	
@@ -43,4 +56,14 @@ int main(){
 	cout<<dp[0];
 	else
 	cout<<"Not  possible";
+	
+	
+	cout<<endl;
+	string s="I am smart fuck goldman";
+	
+	
+	for(int i=0;i<s.length();i++){
+		if(s[i]==' ')
+		cout<<" this  is space"<<endl;
+	}
 }
