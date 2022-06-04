@@ -23,7 +23,7 @@ int sqRoot(int number){
 		}
 		else
 		{
-			end=mid-1;
+			end=mid-1;// signed integr ovrrflow
 		}
 	}
 	
