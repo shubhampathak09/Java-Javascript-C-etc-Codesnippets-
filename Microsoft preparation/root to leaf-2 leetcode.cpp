@@ -63,3 +63,13 @@ int main(){
 	cout<<sum;
 	
 }
+
+/*
+4. Explain Singleton pattern in multi
+//
+ threaded environment. Why dou
+ ble checking lock is requi
+ red ?
+ */
+ 
+ 
