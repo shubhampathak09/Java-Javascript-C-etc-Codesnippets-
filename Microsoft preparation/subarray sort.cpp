@@ -37,3 +37,30 @@ int main(){
 	return 0;
 	
 }
+
+
+
+public class CustomExceptionHandler extends Exception{
+
+public  CustomExceptionHandler(String msg){
+	super(msg);
+}
+
+}
+
+public static void main(String[] args){
+	
+	
+	try{
+		int d=3/0;
+		system.out.println(d);
+	}
+	catch(CustomExceptionHandler e){
+		e.printStacktrace();
+		throw CustomExceptionHandler("Division by zero exception");
+	}
+	finaly{
+		d=1;
+	}
+	
+}
