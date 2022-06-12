@@ -48,6 +48,7 @@ void solve(){
 	
 	cin>>n>>m;
 	
+	bool flag=0;
 	
 	for(int i=1;i<=m;i++){
 		int a,b;
@@ -70,10 +71,11 @@ void solve(){
 		{
 		
 			cout<<"Suspicious bugs found"<<endl;
+			flag=1;
 			break;
 		}
 	}
-	
+	if(flag==0)
 	cout<<"No Suspicious bugs found";
 }
 
