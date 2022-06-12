@@ -1,9 +1,12 @@
 /*
 Reference : How can we find all simple cycles in an undirected graph efficiently? How do I find the points that are forming a cycle in a graph?
 
-Giving it a second thought, I can say that there’s no alternative solution which is possible which can give the answer in polynomial time. Infact, if the polynomial time complexity solution existed, the Hamiltonian cycle problem could be solved in polynomial time as well which is indeed an NP-Hard problem as of now.
+Giving it a second thought, 
+I can say that there’s no alternative solution which is possible which can give the answer in polynomial time. 
+Infact, if the polynomial time complexity solution existed, the Hamiltonian cycle problem could be solved in polynomial time as well
+ which is indeed an NP-Hard problem as of now.
 
-Take a look at this AC code to know how to apply dfs to this problem.
+ 
 */
 
 /*

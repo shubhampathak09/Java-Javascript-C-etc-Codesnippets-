@@ -34,6 +34,7 @@ int main(){
 	
 	int t=3;
 	vector<int> a={1,2,3};
+	
 	vector<int>b={3,2,1};
 	int n=3;
 	
