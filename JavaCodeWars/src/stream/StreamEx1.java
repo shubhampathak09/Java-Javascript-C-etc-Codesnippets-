@@ -22,7 +22,7 @@ public class StreamEx1 {
         System.out.println(arr1);
 
 
-        List<>
+     
 
     }
 
