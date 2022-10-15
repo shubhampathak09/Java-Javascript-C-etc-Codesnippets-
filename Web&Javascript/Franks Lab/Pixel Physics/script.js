@@ -11,9 +11,15 @@ window.addEventListener('load',function(){
           this.x=Math.random() * effect.width;
           this.y=Math.random() * effect.height;
           this.size=10;
+          this.vx=1;
+          this.vy=1;
       }
       draw(context){
           context.fillRect(this.x,this.y,this.size,this.size);
+      }
+      update(){
+          this.x += this.vx;
+          this.y += this.vy;
       }
     }
     class Effects{
@@ -36,15 +42,21 @@ window.addEventListener('load',function(){
            this.particlesArray.forEach(particle => particle.draw(context));
            context.drawImage(this.image,this.x,this.y);
        }
+       update(){
+        this.particlesArray.forEach(particle => particle.update());
+       }
     }
     const effect=new Effects(canvas.width,canvas.height);
     
     effect.init();
-    effect.draw(ctx);
-    console.log(effect);
+      // console.log(effect);
     function animate(){
-
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        effect.draw(ctx);
+        effect.update();
+        requestAnimationFrame(animate);
     }
+    animate();
   
  //   ctx.fillRect(0,0,100,200);
  //   ctx.drawImage(image1,100,200,400,300);
