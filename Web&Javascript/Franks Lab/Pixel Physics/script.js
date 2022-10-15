@@ -8,22 +8,34 @@ window.addEventListener('load',function(){
 
     class Particle{
       constructor(){
-          this.x=0;
-          this.y=0;
-          this.size=30;
+          this.x=200;
+          this.y=150;
+          this.size=100;
       }
       draw(){
           ctx.fillRect(this.x,this.y,this.size,this.size);
       }
     }
     class Effects{
-
+       constructor(width,height){
+           this.width=width;
+           this.height=height;
+           this.particlesArray =[];
+       }
+       init(){
+           this.particlesArray.push(new Particle());
+       }
+       draw(){
+           this.particlesArray.forEach(particle => particle.draw());
+       }
     }
+    const effect=new Effects(canvas.width,canvas.height);
+    effect.init();
+    console.log(effect);
     function animate(){
 
     }
-    const particle1=new Particle();
-    particle1.draw();
+  
  //   ctx.fillRect(0,0,100,200);
  //   ctx.drawImage(image1,100,200,400,300);
 })
