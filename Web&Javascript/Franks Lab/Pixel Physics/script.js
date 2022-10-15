@@ -11,8 +11,8 @@ window.addEventListener('load',function(){
           this.x=Math.random() * effect.width;
           this.y=Math.random() * effect.height;
           this.size=10;
-          this.vx=1;
-          this.vy=1;
+          this.vx=Math.random() * 2 - 1;
+          this.vy=Math.random() * 2 - 1;
       }
       draw(context){
           context.fillRect(this.x,this.y,this.size,this.size);
