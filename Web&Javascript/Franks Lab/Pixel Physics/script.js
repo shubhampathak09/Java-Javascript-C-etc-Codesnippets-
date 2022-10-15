@@ -21,13 +21,20 @@ window.addEventListener('load',function(){
            this.width=width;
            this.height=height;
            this.particlesArray =[];
+           this.image=document.getElementById('image1');
+           this.centerX=this.width * 0.5;
+           this.centerY=this.height * 0.5;
+           this.x=this.centerX -this.image.width * 0.5;
+           this.y=this.centerY -this.image.height *0.5;
        }
        init(){
+           for(let i=0;i<10;i++){
            this.particlesArray.push(new Particle(effect));
           // this.particlesArray.push(new Particle());
-       }
+       }}
        draw(context){
            this.particlesArray.forEach(particle => particle.draw(context));
+           context.drawImage(this.image,this.x,this.y);
        }
     }
     const effect=new Effects(canvas.width,canvas.height);
