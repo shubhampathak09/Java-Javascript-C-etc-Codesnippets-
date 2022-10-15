@@ -8,12 +8,12 @@ window.addEventListener('load',function(){
 
     class Particle{
       constructor(){
-          this.x=200;
-          this.y=150;
+          this.x=Math.random() * canvas.width;
+          this.y=Math.random() * canvas.height;
           this.size=100;
       }
-      draw(){
-          ctx.fillRect(this.x,this.y,this.size,this.size);
+      draw(context){
+          context.fillRect(this.x,this.y,this.size,this.size);
       }
     }
     class Effects{
@@ -25,13 +25,14 @@ window.addEventListener('load',function(){
        init(){
            this.particlesArray.push(new Particle());
        }
-       draw(){
-           this.particlesArray.forEach(particle => particle.draw());
+       draw(context){
+           this.particlesArray.forEach(particle => particle.draw(context));
        }
     }
     const effect=new Effects(canvas.width,canvas.height);
     effect.init();
-    console.log(effect);
+    effect.draw(ctx);
+    //console.log(effect);
     function animate(){
 
     }
