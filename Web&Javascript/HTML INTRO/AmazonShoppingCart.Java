@@ -31,7 +31,7 @@ public void removeItemFromShoppingCart(Item item);
 
 class Guest extends Customer{
 
-    public Account createAccount;
+    public Account createAccount();
 
 
 }
@@ -52,9 +52,201 @@ class Seller extends User{
 
 class Buyer extends User{
 
-public void placeOrder(Shopping cart);
+Order orderobj; // ? this will enable to place orders    
+public OrderStatus placeOrder(ShoppingCart cart);
 public void addReview(ProductReview review);
 
 
 
 }
+
+public class Account{
+
+String name;
+String email;
+String phone;
+String userName;
+String password;
+
+
+List<Address> shippingAddress;
+AccountStatus accountStatus;
+
+
+}
+
+
+public class Address{
+    int pinCode;
+    String street;
+    String city;
+    String state;
+    String country;
+}
+
+public enum AccountStatus{
+    ACTIVE,
+    BLOCKED,
+    INACTIVE
+}
+
+public class ShoppingCart{
+
+    List<Items>;
+    double cartValue;
+
+    //apis  add update delete get all items
+    // get cart value;
+   
+    public void addItem(Item item);
+    public void updateItem(Item item);
+    public void deleteItem(Item item);
+    public void checkOutItems(); // payemt
+    public List<Items>getItems();
+    public double getCartValue();
+}
+
+class Item{
+    int quantity;
+    Poduct product;
+}
+
+class Product{
+
+    int productId;
+    String productDescription;
+    String name;
+    ProductCategory ProductCategory;
+    Seller seller;
+    double cost;
+    
+    List<ProductReview>ProductReviews;
+
+}
+
+public enum ProductCategory{
+    ELECTRONICS,GROCERY,EDUCATION,MOBILE
+}
+
+public class ProductReview{
+
+    String details;
+    Buyer reviewer;
+    int ratings;
+
+}
+
+public class Search{
+    public List<Product> searchByName(String name);
+     public List<Prodduct> searchByCategory(ProductCategory ProductCategory);
+
+
+}
+
+class Order{
+
+
+int orderId;
+List<Items> orderItems;
+double orderValue;
+Buyer buyer;
+Date orderDate;
+NotificationService notificationService;
+
+List<OrderLog> orderLog;
+// apis
+
+public OrderStatus placeOrder();
+public OrderStatus trackOrder();
+public void addOrderLogs();
+public  PaymentStatus makePayement(PaymenType paymentType);
+
+
+
+
+
+}
+
+public enum OrderStatus{
+PACKED,SHIPPED,ENROUTE,OUT_FOR_DELIVERY,DELIVERED,CANCELLED
+}
+
+public enum PaymentStatus{
+SUCESS,ERROR,CANCELLED,REFUND_INITIATED,REFUNDED
+}
+
+public enum PaymenType{
+CREDIT_CARD,UPI,CASH,NET_BANKING
+}
+
+class OrderLog{
+    String orderDetails;
+    Date createdDate;
+    OrderStatus status;
+}
+
+class NotificationService{
+
+public boolean sendNotification(NotificationDomain notificationDomain){
+
+
+Notification notficationObject;
+MessageAttribute messageAttribute;
+
+switch(notificationDomain.getNotificationType()){
+
+case NotificationType.EMAIL:
+     notficationObject=new EmailNotiication();
+     messageAttribute=new MessageAttribute("abc@abc.com",notificationDomain.getUser().getAccount().getEmail(),"message default"); 
+     break;
+
+
+     case NotificationType.WHATSAPP:
+     notficationObject=new EmailNotiication();
+     messageAttribute=new MessageAttribute("123445678",notificationDomain.getWhatsApp()); 
+     break;
+     
+     
+    default:
+    notficationObject=new EmailNotiication();
+    messageAttribute=new MessageAttribute("912345678",notificationDomain.getSMS()); 
+    break;
+}
+    return notficationObject.sendNotification(messageAttribute);
+ //  return messageAttribute;
+
+}
+
+class NotificationDomain{
+
+  NotificationType notificationType;
+  string notificationId;
+  User user;
+
+}
+
+class MessageAttributes{
+     String tp;
+     String from;
+     String message;
+}
+
+public interface Notification{
+
+
+boolean sendNotification(MessageAttribute messageAttribute);
+
+}
+class EmailNotification implements Notification{
+    boolean sendNotification(MessageAttribute MessageAttribute);
+}
+
+class WhatsAppNotification implements Notification{
+    boolean sendNotification(MessageAttribute MessageAttribute);
+}
+
+class SMSNotification implements Notification{
+    boolean sendNotification(MessageAttribute MessageAttribute);
+}
+}
+
