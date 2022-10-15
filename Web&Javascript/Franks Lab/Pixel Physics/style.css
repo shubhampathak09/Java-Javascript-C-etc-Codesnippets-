@@ -10,3 +10,6 @@
     position:absolute;
     z-index:100;
 }
+#image1{
+    display:none
+}
