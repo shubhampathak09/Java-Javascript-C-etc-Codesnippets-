@@ -43,6 +43,7 @@ window.addEventListener('load',function(){
            context.drawImage(this.image,this.x,this.y);
        }
        update(){
+        this.x++;   
         this.particlesArray.forEach(particle => particle.update());
        }
     }
