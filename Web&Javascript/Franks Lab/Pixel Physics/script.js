@@ -7,7 +7,7 @@ window.addEventListener('load',function(){
     const image1 = this.document.getElementById('image1');
 
     class Particle{
-      constructor(effect){
+      constructor(){
           this.x=Math.random() * effect.width;
           this.y=Math.random() * effect.height;
           this.size=10;
@@ -33,23 +33,20 @@ window.addEventListener('load',function(){
            this.x=this.centerX -this.image.width * 0.5;
            this.y=this.centerY -this.image.height *0.5;
        }
-       init(){
-           for(let i=0;i<100;i++){
-           this.particlesArray.push(new Particle(effect));
-          // this.particlesArray.push(new Particle());
-       }}
+       init(context){
+        context.drawImage(this.image,this.x,this.y);
+        const pixels = context.getImageData(0,0,this.width,this.height);
+        console.log(pixels);   
+    }
        draw(context){
            this.particlesArray.forEach(particle => particle.draw(context));
-           context.drawImage(this.image,this.x,this.y);
-       }
+                }
        update(){
-        this.x++;   
         this.particlesArray.forEach(particle => particle.update());
        }
     }
     const effect=new Effects(canvas.width,canvas.height);
-    
-    effect.init();
+    effect.init(ctx);
       // console.log(effect);
     function animate(){
         ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -57,7 +54,7 @@ window.addEventListener('load',function(){
         effect.update();
         requestAnimationFrame(animate);
     }
-    animate();
+  //  animate();
   
  //   ctx.fillRect(0,0,100,200);
  //   ctx.drawImage(image1,100,200,400,300);
