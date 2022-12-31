@@ -36,4 +36,15 @@ def getWorldFromTextMap(textmap):
     for x in range(worldWidth):
         for y in range(worldHeight):
             world[x][y]=textmap[y][x]
-    return world        
+    return world
+
+def printWorld(world):
+    worldWidth=len(world)
+    worldHeight=len(world[0])
+    for y in range(worldHeight):
+        for x in range(worldWidth):
+            sys.stdout.write(world[x][y])
+    sys.stdout.write("\n")
+        
+
+        
