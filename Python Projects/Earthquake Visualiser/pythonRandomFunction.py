@@ -15,6 +15,11 @@ def generate(len):
 
 
 def mutate(len,p):
+    r=random.random()
+    if(r<=p):
+        print('1')
+    else:
+        print('0')        
     return
 
 def printText():
@@ -25,3 +30,16 @@ def printText():
         print('cats')
     else:
         print('bats')    
+        
+        
+def hippyJoin(string):
+    s=''.join('1' if chr=='0' else '0' for chr in string)
+    return s     
+
+def mutate1(chromosome,p):
+    for c in chromosome:
+        print(c)
+        r=random.random()
+        print(r)
+        return  
+   
