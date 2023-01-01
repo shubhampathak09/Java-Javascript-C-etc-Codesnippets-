@@ -46,5 +46,29 @@ def printWorld(world):
             sys.stdout.write(world[x][y])
     sys.stdout.write("\n")
         
-
+def floodFill(world,x,y,oldChar,newCHar):
+    worldWidth=len(world)
+    worldHeight=len(world[0])
+    
+    if oldChar == None:
+        oldChar=world[x][y]
         
+    if world[x][y]!=oldChar:
+       return
+    world[x][y]=newCHar
+    if x > 0 :
+       floodFill(world,x-1,y,oldChar,newCHar)
+    if y > 0 :
+       floodFill(world,x,y-1,oldChar,newCHar)
+    if( x< worldWidth-1):
+       floodFill(world,x+1,y,oldChar,newCHar)
+    if(y< worldHeight-1):
+       floodFill(world, x, y+1, oldChar, newCHar)    
+
+
+
+
+def getNumOfRooms(world):
+    worldWidth=len(world)
+    worldHeight=len(world[0])
+    roomCount=-1
