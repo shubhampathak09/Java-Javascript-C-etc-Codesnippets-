@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Dec 30 19:38:57 2022
+Created on Sun Jan  1 20:54:51 2023
 
-@author: Shubham Pathak
+@author: Shubham Patahk
 """
-import random
 
-for i in range(100):
-    a=(random.randint(0, 1))
-    print(a)
+
