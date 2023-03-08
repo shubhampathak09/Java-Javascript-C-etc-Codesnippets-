@@ -15,6 +15,7 @@ void setup() {
 }
 
 void draw(){
+  fullScreen();
   background(127);
   for(int i=0;i< cols-1; i++)
   {
