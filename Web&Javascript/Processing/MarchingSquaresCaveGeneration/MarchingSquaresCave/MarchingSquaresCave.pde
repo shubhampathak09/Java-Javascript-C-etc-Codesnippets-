@@ -40,8 +40,10 @@ void draw(){
       case 0:
       break;
       case 1:
+      line(c,d);
       break;
       case 2:
+      
       break;
       case 3:
       break;
@@ -79,6 +81,10 @@ void draw(){
   }
   
 }
+ void line(PVector v1,PVector v2){
+ 
+   line(v1.x,v1.y,v2.x,v2.y);
+ }
  int getState(int a,int b,int c,int d){
    
     return  a * 8 + b * 4 + c* 2 + d* 1;
