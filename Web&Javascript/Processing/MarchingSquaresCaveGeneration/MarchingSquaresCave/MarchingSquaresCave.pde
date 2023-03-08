@@ -43,21 +43,29 @@ void draw(){
       line(c,d);
       break;
       case 2:
-      
+      line(b,c);
       break;
       case 3:
+      line(b,d);
       break;
       case 4:
+      line(a,b);
       break;
       case 5:
+      line(a,d);
+      line (b,c);
       break;
       case 6:
+      line(a,c);
       break;
       case 7:
+      line(a,d);
       break;
       case 8:
+      line(a,d);
       break;
       case 9:
+      line(a,c);
       break;
       case 10:
       break;
