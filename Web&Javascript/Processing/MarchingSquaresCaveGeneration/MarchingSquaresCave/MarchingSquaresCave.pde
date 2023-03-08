@@ -35,6 +35,8 @@ void draw(){
     PVector c= new PVector(x + res * 0.5, y + res);
     PVector d= new PVector(x , y + res * 0.5);
     int state=getState(field[i][j],field[i+1][j],field[i+1][j+1],field[i][j+1]);
+    stroke(255);
+    strokeWeight(1);
     switch(state) {
       
       case 0:
@@ -68,23 +70,26 @@ void draw(){
       line(a,c);
       break;
       case 10:
+      line(a,b);
+      line(c,d);
       break;
       case 11:
+      line(a,b);
       break;
       case 12:
+      line(b,d);
       break;
       case 13:
+      line(b,c);
       break;
       case 14:
+      line(c,d);
       break;
       case 15:
+      line(b,c);
       break;
       
-    }
-    stroke(255);
-    strokeWeight(1);
-    line ( a. x,a.y,b.x,b.y);
-      
+    }    
     }
   }
   
