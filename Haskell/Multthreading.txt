@@ -1,0 +1,49 @@
+1. 2-3 slots for mentor availability -> timing -> 10 to 5 pm  (mon to friday)
+2. quiz -> support@qpiAi.tech
+3 passing criteria -> 40 percent , 70 percent above ->good
+4.2hrs a day -> recommended , weekend -> 2.5hr
+
+
+
+August
+
+Sept 
+
+Oct 
+
+Nov
+
+
+- Java 
+  Oops
+  inheitance
+  interface
+  abstract class
+  polymorphsim
+  internal dsa hmap,ll,stacks,pq
+  generics
+  Collections
+  ENUMS
+  Java GC
+  
+  
+  Aug 
+  
+  Java
+  LLD
+  HLD
+  
+  Algo 2 problems
+  
+  
+  Sept
+  
+  Algos   + machine codding
+  
+  
+  Oct  & Nov
+  revision
+  
+  
+  
+  

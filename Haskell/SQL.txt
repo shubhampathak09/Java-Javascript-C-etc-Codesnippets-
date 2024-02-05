@@ -1,0 +1,19 @@
+1.Which among the given options is(are) not an aggregate function 
+(syntactically)
+
+
+
+count
+
+max
+
+add
+
+average
+
+
+ans 
+
+add and average
+average -> avg
+
