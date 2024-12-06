@@ -9,6 +9,8 @@ int main() {
     }
 
     vector<int> a, b;
+    map<int,int> dict;
+    
     int x, y;
 
     // Debug line to check if the file is being read
@@ -18,6 +20,10 @@ int main() {
         cout << "Read values: " << x << " " << y << endl;  // Debug line to check the values being read
         a.push_back(x);
         b.push_back(y);
+        if(dict[y]==0){
+        	dict[y] =1;
+		}else
+		dict[y]++;
     }
 
     inputFile.close();
@@ -45,7 +51,20 @@ int main() {
     for(int i =0 ;i<1000;i++){
     	sum+=abs(a[i]-b[i]);
 	}
+	
+	int similarity =0;
+	
+	
+	for(int i=0;i<1000;i++){
+		if(dict.find(a[i])!=dict.end()){
+			similarity += dict[a[i]] * a[i];
+		}
+	}
     
     cout<<sum;
+    
+    cout<<"....."<<endl;
+    
+    cout<<similarity;
 }
 
