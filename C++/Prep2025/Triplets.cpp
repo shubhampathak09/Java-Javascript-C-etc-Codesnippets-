@@ -1,0 +1,1 @@
+// triplets sum to k 
